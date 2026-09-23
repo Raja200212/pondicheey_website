@@ -157,7 +157,7 @@
   font-size: 0.95rem;
   font-weight: 800;
   letter-spacing: 3px;
-  color: #DC2626;
+  color: #2563EB;
   text-transform: uppercase;
 }
 
@@ -181,12 +181,12 @@
 }
 
 .highlight-text {
-  color: #1E40AF;
+  color: #2563EB;
   font-weight: 800;
 }
 
 .divider-dot {
-  color: #D97706;
+  color: #2563EB;
   font-weight: bold;
 }
 
@@ -233,9 +233,9 @@
 .dot-live {
   width: 8px;
   height: 8px;
-  background: #16A34A;
+  background: #2563EB;
   border-radius: 50%;
-  box-shadow: 0 0 10px #16A34A;
+  box-shadow: 0 0 10px #2563EB;
   display: inline-block;
   animation: pulse-glow 2s infinite;
 }
@@ -263,9 +263,9 @@
 }
 
 .live-pill {
-  background: #FFF4E5;
-  border: 1px solid #FED7AA;
-  color: #9A3412;
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  color: #1E40AF;
   font-size: 0.75rem;
   font-weight: 800;
   letter-spacing: 1.5px;

@@ -78,10 +78,10 @@
   font-size: 0.8rem;
   font-weight: 800;
   letter-spacing: 2px;
-  color: #1E40AF;
+  color: #2563EB;
   text-transform: uppercase;
   margin-bottom: 12px;
-  background: #EAF3FF;
+  background: #EFF6FF;
   padding: 5px 16px;
   border-radius: 9999px;
   border: 1px solid #BFDBFE;
@@ -105,7 +105,7 @@
   position: relative;
   padding: 48px;
   border: 1px solid #E2E8F0;
-  background: #F3F6FA;
+  background: #F8FAFC;
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 4px 20px rgba(16, 24, 63, 0.04);
@@ -139,7 +139,7 @@
 }
 
 .about-lead strong {
-  color: #1E40AF;
+  color: #2563EB;
   font-weight: 700;
 }
 
@@ -150,7 +150,7 @@
 }
 
 .about-body strong {
-  color: #DC2626;
+  color: #2563EB;
 }
 
 .creator-support-strip {
@@ -181,18 +181,18 @@
 }
 
 .icon-orange {
-  background: #FFF4E5;
-  border: 1px solid #FED7AA;
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
 }
 
 .icon-blue {
-  background: #EAF3FF;
+  background: #EFF6FF;
   border: 1px solid #BFDBFE;
 }
 
 .icon-green {
-  background: #EFF9EC;
-  border: 1px solid #BBF7D0;
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
 }
 
 .support-item strong {

@@ -109,7 +109,7 @@ const specialCategories = [
 .prizes-section {
   padding: 90px 0;
   position: relative;
-  background-color: #F3F6FA;
+  background-color: #F8FAFC;
 }
 
 .text-center {
@@ -127,13 +127,13 @@ const specialCategories = [
   font-size: 0.8rem;
   font-weight: 800;
   letter-spacing: 2px;
-  color: #9A3412;
+  color: #2563EB;
   text-transform: uppercase;
   margin-bottom: 12px;
-  background: #FFF4E5;
+  background: #EFF6FF;
   padding: 5px 16px;
   border-radius: 9999px;
-  border: 1px solid #FED7AA;
+  border: 1px solid #BFDBFE;
 }
 
 .section-title {
@@ -176,43 +176,61 @@ const specialCategories = [
 }
 
 .silver-card {
-  background: #EAF3FF;
+  background: #FFFFFF;
   border-color: #BFDBFE;
 }
 
 .silver-badge {
-  color: #1E40AF;
+  color: #2563EB;
+  background: #EFF6FF;
+  padding: 4px 12px;
+  border-radius: 9999px;
+  display: inline-block;
 }
 
 .silver-text {
-  color: #1E40AF;
+  color: #10183F;
 }
 
 .bronze-card {
-  background: #EFF9EC;
-  border-color: #BBF7D0;
+  background: #FFFFFF;
+  border-color: #BFDBFE;
 }
 
 .bronze-badge {
-  color: #166534;
+  color: #2563EB;
+  background: #EFF6FF;
+  padding: 4px 12px;
+  border-radius: 9999px;
+  display: inline-block;
 }
 
 .bronze-text {
-  color: #166534;
+  color: #10183F;
 }
 
 .spotlight-podium {
-  background: #FFF4E5;
-  border: 2px solid #FCD34D;
-  box-shadow: 0 12px 35px rgba(217, 119, 6, 0.15);
+  background: #10183F;
+  border: 2px solid #2563EB;
+  box-shadow: 0 16px 40px rgba(16, 24, 63, 0.25);
   transform: scale(1.05);
   padding: 42px 28px;
   z-index: 5;
+  color: #FFFFFF;
 }
 
 .spotlight-podium:hover {
   transform: scale(1.07) translateY(-4px);
-  box-shadow: 0 18px 45px rgba(217, 119, 6, 0.22);
+  box-shadow: 0 20px 50px rgba(37, 99, 235, 0.3);
+}
+
+.spotlight-podium .prize-title {
+  color: #94A3B8;
+}
+
+.spotlight-podium .prize-perks {
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  color: #FFFFFF;
 }
 
 .winner-crown {
@@ -227,14 +245,14 @@ const specialCategories = [
   top: -12px;
   left: 50%;
   transform: translateX(-50%);
-  background: #10183F;
+  background: #2563EB;
   color: #FFFFFF;
   font-weight: 900;
   font-size: 0.75rem;
   letter-spacing: 1.5px;
   padding: 4px 18px;
   border-radius: 9999px;
-  box-shadow: 0 4px 12px rgba(16, 24, 63, 0.2);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4);
 }
 
 .medal-badge {
@@ -246,7 +264,12 @@ const specialCategories = [
 }
 
 .gold-badge {
-  color: #9A3412;
+  color: #93C5FD;
+  background: rgba(37, 99, 235, 0.2);
+  padding: 4px 14px;
+  border-radius: 9999px;
+  display: inline-block;
+  border: 1px solid rgba(147, 197, 253, 0.3);
 }
 
 .prize-amount {
@@ -257,7 +280,7 @@ const specialCategories = [
 }
 
 .gold-text {
-  color: #9A3412;
+  color: #FFFFFF;
 }
 
 .prize-title {
@@ -319,12 +342,12 @@ const specialCategories = [
 }
 
 .summary-badge span {
-  background: #EAF3FF;
+  background: #EFF6FF;
   padding: 8px 18px;
   border-radius: 9999px;
   font-size: 0.85rem;
   font-weight: 800;
-  color: #1E40AF;
+  color: #2563EB;
   border: 1px solid #BFDBFE;
   white-space: nowrap;
 }
@@ -339,7 +362,7 @@ const specialCategories = [
 }
 
 .sparkle {
-  color: #D97706;
+  color: #2563EB;
 }
 
 .category-grid-sub {

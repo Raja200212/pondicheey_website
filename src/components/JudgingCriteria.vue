@@ -109,10 +109,10 @@
   font-size: 0.8rem;
   font-weight: 800;
   letter-spacing: 2px;
-  color: #1E40AF;
+  color: #2563EB;
   text-transform: uppercase;
   margin-bottom: 12px;
-  background: #EAF3FF;
+  background: #EFF6FF;
   padding: 5px 16px;
   border-radius: 9999px;
   border: 1px solid #BFDBFE;
@@ -166,21 +166,21 @@
 }
 
 .weight-blue {
-  background: #EAF3FF;
+  background: #EFF6FF;
   border: 1px solid #BFDBFE;
-  color: #1E40AF;
+  color: #2563EB;
 }
 
 .weight-orange {
-  background: #FFF4E5;
-  border: 1px solid #FED7AA;
-  color: #9A3412;
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  color: #2563EB;
 }
 
 .weight-green {
-  background: #EFF9EC;
-  border: 1px solid #BBF7D0;
-  color: #166534;
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  color: #2563EB;
 }
 
 .criteria-title {

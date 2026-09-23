@@ -13,23 +13,26 @@
       <!-- Section 3: About We The Leaders & Reel Competition -->
       <AboutSection />
 
-      <!-- Section 4: Prize Pool & Awards -->
+      <!-- Section 4: Reel Themes & Content Topics -->
+      <ContentTopics />
+
+      <!-- Section 5: Prize Pool & Awards -->
       <PrizePoolSection />
 
-      <!-- Section 5: Judging Criteria -->
+      <!-- Section 6: Judging Criteria -->
       <JudgingCriteria />
 
-      <!-- Section 6 & 7: Important Rules & Event Timeline -->
+      <!-- Section 7 & 8: Important Rules & Event Timeline -->
       <RulesTimeline />
 
-      <!-- Section 8: Registration & Reel Submission Form -->
+      <!-- Section 9: Registration & Reel Submission Form -->
       <RegistrationForm @submitted="handleSubmissionSuccess" />
     </main>
 
     <!-- Footer -->
     <Footer />
 
-    <!-- Section 9: Post Submission Success Screen Modal -->
+    <!-- Section 10: Post Submission Success Screen Modal -->
     <SuccessModal
       v-if="latestSubmission"
       :submission="latestSubmission"
@@ -44,6 +47,7 @@ import Navbar from './components/Navbar.vue'
 import HeroSection from './components/HeroSection.vue'
 import HighlightsBar from './components/HighlightsBar.vue'
 import AboutSection from './components/AboutSection.vue'
+import ContentTopics from './components/ContentTopics.vue'
 import PrizePoolSection from './components/PrizePoolSection.vue'
 import JudgingCriteria from './components/JudgingCriteria.vue'
 import RulesTimeline from './components/RulesTimeline.vue'

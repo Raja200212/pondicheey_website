@@ -1,6 +1,6 @@
 <template>
-  <div v-if="submission" class="modal-backdrop">
-    <div class="modal-dialog animate-pop">
+  <div v-if="submission" class="modal-backdrop" @click.self="$emit('close')">
+    <div class="modal-dialog animate-pop" role="dialog" aria-modal="true">
       <!-- Close Button -->
       <button class="close-btn" @click="$emit('close')" aria-label="Close Modal">✕</button>
 
@@ -104,7 +104,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, onUnmounted } from 'vue'
 import confetti from 'canvas-confetti'
 
 const props = defineProps({
@@ -143,27 +143,45 @@ const shareOnWhatsApp = () => {
   window.open(url, '_blank')
 }
 
-onMounted(() => {
-  confetti({
-    particleCount: 80,
-    spread: 70,
-    origin: { y: 0.6 }
-  })
+const handleKeyDown = (e) => {
+  if (e.key === 'Escape') {
+    emit('close')
+  }
+}
 
-  setTimeout(() => {
+onMounted(() => {
+  document.body.style.overflow = 'hidden'
+  window.addEventListener('keydown', handleKeyDown)
+
+  try {
     confetti({
-      particleCount: 50,
-      angle: 60,
-      spread: 55,
-      origin: { x: 0 }
+      particleCount: 80,
+      spread: 70,
+      origin: { y: 0.6 }
     })
-    confetti({
-      particleCount: 50,
-      angle: 120,
-      spread: 55,
-      origin: { x: 1 }
-    })
-  }, 300)
+
+    setTimeout(() => {
+      confetti({
+        particleCount: 50,
+        angle: 60,
+        spread: 55,
+        origin: { x: 0 }
+      })
+      confetti({
+        particleCount: 50,
+        angle: 120,
+        spread: 55,
+        origin: { x: 1 }
+      })
+    }, 300)
+  } catch (e) {
+    console.error('Confetti error', e)
+  }
+})
+
+onUnmounted(() => {
+  document.body.style.overflow = ''
+  window.removeEventListener('keydown', handleKeyDown)
 })
 </script>
 
@@ -174,10 +192,10 @@ onMounted(() => {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(16, 24, 63, 0.7);
+  background: rgba(16, 24, 63, 0.75);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  z-index: 100;
+  z-index: 99999;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -246,9 +264,9 @@ onMounted(() => {
 
 .status-pill {
   display: inline-block;
-  background: #EFF9EC;
-  border: 1px solid #BBF7D0;
-  color: #166534;
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  color: #2563EB;
   font-size: 0.75rem;
   font-weight: 800;
   letter-spacing: 1.5px;
@@ -276,8 +294,8 @@ onMounted(() => {
 
 /* ID Pass Card */
 .id-pass-card {
-  background: #EAF3FF;
-  border: 1.5px dashed #93C5FD;
+  background: #F8FAFC;
+  border: 1.5px dashed #BFDBFE;
   border-radius: 18px;
   padding: 22px;
   margin-bottom: 24px;
@@ -325,7 +343,7 @@ onMounted(() => {
   font-size: 0.7rem;
   font-weight: 800;
   letter-spacing: 1.5px;
-  color: #DC2626;
+  color: #2563EB;
 }
 
 .rrc-tag {
@@ -342,7 +360,7 @@ onMounted(() => {
   border: 1px solid #BFDBFE;
   padding: 4px 10px;
   border-radius: 6px;
-  color: #1E40AF;
+  color: #2563EB;
 }
 
 .pass-id-block {
@@ -379,9 +397,9 @@ onMounted(() => {
 }
 
 .copy-btn {
-  background: #F3F6FA;
-  border: 1px solid #CBD5E1;
-  color: #10183F;
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  color: #2563EB;
   padding: 6px 14px;
   border-radius: 8px;
   font-size: 0.8rem;
@@ -391,11 +409,11 @@ onMounted(() => {
 }
 
 .copy-btn:hover {
-  background: #E2E8F0;
+  background: #DBEAFE;
 }
 
 .copied-text {
-  color: #166534;
+  color: #2563EB;
 }
 
 .pass-details-grid {
@@ -424,7 +442,7 @@ onMounted(() => {
 }
 
 .text-accent {
-  color: #1E40AF;
+  color: #2563EB;
 }
 
 .pass-reel-link {
@@ -437,7 +455,7 @@ onMounted(() => {
 
 .reel-url {
   font-size: 0.8rem;
-  color: #1E40AF;
+  color: #2563EB;
   text-decoration: none;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -481,7 +499,7 @@ onMounted(() => {
 }
 
 .check-icon {
-  color: #16A34A;
+  color: #2563EB;
   font-weight: bold;
 }
 
@@ -497,7 +515,7 @@ onMounted(() => {
   align-items: center;
   justify-content: center;
   gap: 8px;
-  background: #25D366;
+  background: linear-gradient(135deg, #10183F 0%, #2563EB 100%);
   color: #FFFFFF;
   font-family: var(--font-display);
   font-weight: 700;
@@ -507,13 +525,13 @@ onMounted(() => {
   cursor: pointer;
   font-size: 1rem;
   transition: all 0.25s;
-  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+  box-shadow: 0 4px 15px rgba(16, 24, 63, 0.25);
 }
 
 .btn-whatsapp:hover {
-  background: #20ba5a;
+  background: linear-gradient(135deg, #1D4ED8 0%, #10183F 100%);
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.45);
+  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.35);
 }
 
 @keyframes popIn {

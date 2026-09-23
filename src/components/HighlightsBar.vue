@@ -100,18 +100,18 @@
 }
 
 .icon-blue {
-  background: #EAF3FF;
+  background: #EFF6FF;
   border-color: #BFDBFE;
 }
 
 .icon-orange {
-  background: #FFF4E5;
-  border-color: #FED7AA;
+  background: #EFF6FF;
+  border-color: #BFDBFE;
 }
 
 .icon-green {
-  background: #EFF9EC;
-  border-color: #BBF7D0;
+  background: #EFF6FF;
+  border-color: #BFDBFE;
 }
 
 .item-info {
@@ -135,7 +135,7 @@
 }
 
 .text-accent-gold {
-  color: #B45309;
+  color: #2563EB;
   font-weight: 800;
 }
 

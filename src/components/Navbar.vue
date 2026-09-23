@@ -16,9 +16,10 @@
         <!-- Desktop Menu -->
         <nav class="nav-links">
           <a href="#about" class="nav-item">About</a>
+          <a href="#content-themes" class="nav-item">Themes & Topics</a>
           <a href="#prizes" class="nav-item">Prize Pool</a>
           <a href="#judging" class="nav-item">Judging</a>
-          <a href="#rules" class="nav-item">Rules & Timeline</a>
+          <a href="#rules" class="nav-item">Rules</a>
         </nav>
 
         <!-- CTA Button -->
@@ -40,6 +41,7 @@
       <!-- Mobile Dropdown Menu -->
       <div v-if="isMobileMenuOpen" class="mobile-menu">
         <a href="#about" @click="isMobileMenuOpen = false" class="mobile-nav-item">About Event</a>
+        <a href="#content-themes" @click="isMobileMenuOpen = false" class="mobile-nav-item">Themes & Topics Guide</a>
         <a href="#prizes" @click="isMobileMenuOpen = false" class="mobile-nav-item">Prize Pool & Awards</a>
         <a href="#judging" @click="isMobileMenuOpen = false" class="mobile-nav-item">Judging Criteria</a>
         <a href="#rules" @click="isMobileMenuOpen = false" class="mobile-nav-item">Rules & Timeline</a>
@@ -120,7 +122,7 @@ const isMobileMenuOpen = ref(false)
   font-size: 0.75rem;
   font-weight: 800;
   letter-spacing: 2px;
-  color: #DC2626;
+  color: #2563EB;
   text-transform: uppercase;
 }
 

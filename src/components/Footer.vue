@@ -28,6 +28,7 @@
           <h4 class="footer-heading">Quick Navigation</h4>
           <ul class="footer-links-list">
             <li><a href="#about">About We The Leaders</a></li>
+            <li><a href="#content-themes">Reel Themes & Topics</a></li>
             <li><a href="#prizes">Prize Pool & Awards</a></li>
             <li><a href="#judging">Judging Criteria</a></li>
             <li><a href="#rules">Rules & Guidelines</a></li>
@@ -127,7 +128,7 @@
   font-size: 0.75rem;
   font-weight: 800;
   letter-spacing: 2px;
-  color: #F87171;
+  color: #60A5FA;
   text-transform: uppercase;
 }
 
@@ -221,11 +222,11 @@
 }
 
 .dot-green {
-  background: #22C55E;
+  background: #60A5FA;
 }
 
 .dot-blue {
-  background: #60A5FA;
+  background: #3B82F6;
 }
 
 .footer-bottom {

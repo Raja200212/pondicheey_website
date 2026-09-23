@@ -290,6 +290,10 @@
 
           <!-- Submit Button -->
           <div class="submit-action-row">
+            <div v-if="submitError" class="form-validation-alert">
+              ⚠️ {{ submitError }}
+            </div>
+
             <button
               type="submit"
               class="btn-primary submit-btn"
@@ -348,17 +352,19 @@ const wordCount = computed(() => {
 })
 
 const isNearLimit = computed(() => wordCount.value > 450)
+const submitError = ref('')
 
 const validateForm = () => {
   const errs = {}
+  submitError.value = ''
 
-  if (!form.value.fullName.trim()) {
+  if (!form.value.fullName || !form.value.fullName.trim()) {
     errs.fullName = 'Full Name is required'
   }
 
-  const phoneRegex = /^[6-9]\d{9}$/
-  if (!form.value.whatsapp || !phoneRegex.test(form.value.whatsapp.trim())) {
-    errs.whatsapp = 'Please enter a valid 10-digit Indian mobile number'
+  const cleanPhone = (form.value.whatsapp || '').replace(/\D/g, '')
+  if (!cleanPhone || cleanPhone.length < 10) {
+    errs.whatsapp = 'Please enter a valid 10-digit mobile number'
   }
 
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
@@ -370,27 +376,33 @@ const validateForm = () => {
     errs.district = 'Please select your District / City'
   }
 
-  const igRegex = /(https?:\/\/)?(www\.)?(instagram\.com|instagr\.am)\/(reel|p)\/[A-Za-z0-9_-]+/
-  if (!form.value.reelLink || !igRegex.test(form.value.reelLink.trim())) {
-    errs.reelLink = 'Please provide a valid Instagram Reel link (e.g. https://instagram.com/reel/...)'
+  const cleanReel = (form.value.reelLink || '').trim().toLowerCase()
+  if (!cleanReel || (!cleanReel.includes('instagram.com') && !cleanReel.includes('instagr.am') && !cleanReel.startsWith('http'))) {
+    errs.reelLink = 'Please provide a valid Instagram link (e.g. https://instagram.com/reel/...)'
   }
 
-  if (!form.value.igHandle.trim()) {
+  if (!form.value.igHandle || !form.value.igHandle.trim()) {
     errs.igHandle = 'Instagram Handle is required'
   }
 
-  if (!form.value.description.trim()) {
+  if (!form.value.description || !form.value.description.trim()) {
     errs.description = 'Please provide a brief concept description'
   } else if (wordCount.value > 500) {
     errs.description = 'Description exceeds 500 words limit'
   }
 
   if (!form.value.collabCheck) {
-    errs.collabCheck = 'You must confirm posting and sending the collab request to @wtl_leadingthechange'
+    errs.collabCheck = 'Please tick the checkbox confirming your post & collab request to @wtl_leadingthechange'
   }
 
   errors.value = errs
-  return Object.keys(errs).length === 0
+
+  if (Object.keys(errs).length > 0) {
+    submitError.value = 'Please fill all required fields correctly to submit.'
+    return false
+  }
+
+  return true
 }
 
 const getNextRegistrationId = () => {
@@ -403,7 +415,7 @@ const getNextRegistrationId = () => {
 
 const handleSubmit = async () => {
   if (!validateForm()) {
-    const firstErrorElem = document.querySelector('.input-error, .checkbox-error')
+    const firstErrorElem = document.querySelector('.input-error, .checkbox-error, .form-validation-alert')
     if (firstErrorElem) {
       firstErrorElem.scrollIntoView({ behavior: 'smooth', block: 'center' })
     }
@@ -443,7 +455,31 @@ const handleSubmit = async () => {
   }
 
   isSubmitting.value = false
+
+  // Emit event to display the Success popup modal immediately
   emit('submitted', submissionRecord)
+
+  // Reset form for next entry
+  form.value = {
+    fullName: '',
+    whatsapp: '',
+    email: '',
+    district: '',
+    reelLink: '',
+    igHandle: '',
+    description: '',
+    crew: {
+      script: 'Self',
+      cast: 'Self',
+      camera: 'Self',
+      editing: 'Self',
+      voice: 'Self',
+      music: 'N/A'
+    },
+    collabCheck: false
+  }
+  errors.value = {}
+  submitError.value = ''
 }
 </script>
 
@@ -469,10 +505,10 @@ const handleSubmit = async () => {
   font-size: 0.8rem;
   font-weight: 800;
   letter-spacing: 2px;
-  color: #1E40AF;
+  color: #2563EB;
   text-transform: uppercase;
   margin-bottom: 12px;
-  background: #EAF3FF;
+  background: #EFF6FF;
   padding: 5px 16px;
   border-radius: 9999px;
   border: 1px solid #BFDBFE;
@@ -551,7 +587,7 @@ const handleSubmit = async () => {
 }
 
 .req {
-  color: #DC2626;
+  color: #2563EB;
   font-weight: bold;
 }
 
@@ -620,7 +656,7 @@ const handleSubmit = async () => {
 }
 
 .counter-limit {
-  color: #DC2626;
+  color: #2563EB;
   font-weight: bold;
 }
 
@@ -644,14 +680,23 @@ const handleSubmit = async () => {
 
 .form-note-box {
   margin-bottom: 4px;
+  background: #EFF6FF;
+  border-left: 4px solid #2563EB;
+  border-top: 1px solid #DBEAFE;
+  border-right: 1px solid #DBEAFE;
+  border-bottom: 1px solid #DBEAFE;
+  padding: 14px 18px;
+  border-radius: 0 12px 12px 0;
+  font-size: 0.85rem;
+  color: #10183F;
 }
 
 .form-note-box strong {
-  color: #9A3412;
+  color: #2563EB;
 }
 
 .note-example {
-  color: #7C2D12;
+  color: #526078;
   font-size: 0.775rem;
   display: inline-block;
   margin-top: 2px;
@@ -696,12 +741,12 @@ const handleSubmit = async () => {
 }
 
 .custom-checkbox:hover input ~ .checkmark {
-  border-color: #10183F;
+  border-color: #2563EB;
 }
 
 .custom-checkbox input:checked ~ .checkmark {
-  background: #10183F;
-  border-color: #10183F;
+  background: #2563EB;
+  border-color: #2563EB;
 }
 
 .custom-checkbox input:checked ~ .checkmark::after {
@@ -712,7 +757,7 @@ const handleSubmit = async () => {
 }
 
 .collab-tag {
-  color: #1E40AF;
+  color: #2563EB;
   text-decoration: underline;
 }
 
@@ -727,6 +772,25 @@ const handleSubmit = async () => {
   align-items: center;
   gap: 12px;
   padding-top: 10px;
+}
+
+.form-validation-alert {
+  width: 100%;
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  color: #1E40AF;
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 12px 18px;
+  border-radius: 12px;
+  text-align: center;
+  animation: shake 0.3s ease-in-out;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-4px); }
+  75% { transform: translateX(4px); }
 }
 
 .submit-btn {

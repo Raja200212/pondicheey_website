@@ -134,10 +134,10 @@
   font-size: 0.8rem;
   font-weight: 800;
   letter-spacing: 2px;
-  color: #1E40AF;
+  color: #2563EB;
   text-transform: uppercase;
   margin-bottom: 12px;
-  background: #EAF3FF;
+  background: #EFF6FF;
   padding: 5px 16px;
   border-radius: 9999px;
   border: 1px solid #BFDBFE;
@@ -221,21 +221,27 @@
   display: inline-block;
   padding: 2px 8px;
   border-radius: 6px;
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  color: #2563EB;
 }
 
 .badge-blue {
-  background: #EAF3FF;
-  color: #1E40AF;
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  color: #2563EB;
 }
 
 .badge-orange {
-  background: #FFF4E5;
-  color: #9A3412;
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  color: #2563EB;
 }
 
 .badge-green {
-  background: #EFF9EC;
-  color: #166534;
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  color: #2563EB;
 }
 
 .rule-card h4 {
@@ -286,7 +292,7 @@
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  background: #F3F6FA;
+  background: #F8FAFC;
   border: 2px solid #CBD5E1;
   display: flex;
   align-items: center;
@@ -298,20 +304,20 @@
 }
 
 .step-dot.active {
-  background: #16A34A;
-  border-color: #16A34A;
+  background: #2563EB;
+  border-color: #2563EB;
   color: #FFFFFF;
 }
 
 .step-dot.highlight {
-  background: #D97706;
-  border-color: #D97706;
+  background: #10183F;
+  border-color: #10183F;
   color: #FFFFFF;
 }
 
 .step-dot.dot-blue {
-  background: #1E40AF;
-  border-color: #1E40AF;
+  background: #2563EB;
+  border-color: #2563EB;
   color: #FFFFFF;
 }
 
@@ -328,7 +334,7 @@
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  border: 2px solid rgba(22, 163, 74, 0.4);
+  border: 2px solid rgba(37, 99, 235, 0.4);
   animation: pulse-glow 2s infinite;
 }
 
@@ -347,17 +353,17 @@
 }
 
 .active-date {
-  color: #16A34A;
+  color: #2563EB;
   font-weight: 800;
 }
 
 .deadline-date {
-  color: #D97706;
+  color: #10183F;
   font-weight: 800;
 }
 
 .finale-date {
-  color: #10183F;
+  color: #2563EB;
   font-weight: 800;
 }
 
