@@ -370,7 +370,6 @@ const validateForm = () => {
     errs.district = 'Please select your District / City'
   }
 
-  // Instagram Reel URL regex
   const igRegex = /(https?:\/\/)?(www\.)?(instagram\.com|instagr\.am)\/(reel|p)\/[A-Za-z0-9_-]+/
   if (!form.value.reelLink || !igRegex.test(form.value.reelLink.trim())) {
     errs.reelLink = 'Please provide a valid Instagram Reel link (e.g. https://instagram.com/reel/...)'
@@ -452,7 +451,7 @@ const handleSubmit = async () => {
 .registration-section {
   padding: 90px 0;
   position: relative;
-  background: radial-gradient(circle at 50% 10%, rgba(222, 185, 96, 0.15) 0%, transparent 70%);
+  background-color: #FFFFFF;
 }
 
 .text-center {
@@ -470,27 +469,26 @@ const handleSubmit = async () => {
   font-size: 0.8rem;
   font-weight: 800;
   letter-spacing: 2px;
-  color: #85580a;
+  color: #1E40AF;
   text-transform: uppercase;
   margin-bottom: 12px;
-  background: rgba(253, 246, 226, 0.95);
+  background: #EAF3FF;
   padding: 5px 16px;
   border-radius: 9999px;
-  border: 1px solid rgba(197, 155, 39, 0.4);
-  box-shadow: 0 2px 8px rgba(184, 134, 11, 0.08);
+  border: 1px solid #BFDBFE;
 }
 
 .section-title {
   font-family: var(--font-cinematic);
   font-size: clamp(2rem, 3.5vw, 2.8rem);
   font-weight: 800;
-  color: #1c1917;
+  color: #10183F;
   line-height: 1.2;
   margin-bottom: 12px;
 }
 
 .section-subtitle {
-  color: #57534e;
+  color: #526078;
   font-size: 1.1rem;
 }
 
@@ -498,9 +496,10 @@ const handleSubmit = async () => {
   max-width: 880px;
   margin: 0 auto;
   padding: 44px;
-  background: #ffffff;
-  border: 1px solid rgba(197, 155, 39, 0.3);
-  box-shadow: 0 25px 60px rgba(184, 134, 11, 0.1), 0 4px 20px rgba(0, 0, 0, 0.03);
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 20px;
+  box-shadow: 0 4px 25px rgba(16, 24, 63, 0.05);
 }
 
 .submission-form {
@@ -520,7 +519,7 @@ const handleSubmit = async () => {
   align-items: center;
   gap: 10px;
   padding-bottom: 12px;
-  border-bottom: 1px solid rgba(197, 155, 39, 0.2);
+  border-bottom: 1px solid #E2E8F0;
 }
 
 .divider-icon {
@@ -531,7 +530,7 @@ const handleSubmit = async () => {
   font-family: var(--font-display);
   font-size: 1.2rem;
   font-weight: 700;
-  color: #1c1917;
+  color: #10183F;
 }
 
 .grid-2-col {
@@ -552,13 +551,13 @@ const handleSubmit = async () => {
 }
 
 .req {
-  color: #b45309;
+  color: #DC2626;
   font-weight: bold;
 }
 
 .label-hint {
   font-size: 0.75rem;
-  color: #78716c;
+  color: #526078;
   font-weight: normal;
   margin-left: 4px;
 }
@@ -572,7 +571,7 @@ const handleSubmit = async () => {
 .input-prefix {
   position: absolute;
   left: 14px;
-  color: #85580a;
+  color: #526078;
   font-weight: 700;
   font-size: 0.95rem;
   pointer-events: none;
@@ -595,7 +594,7 @@ const handleSubmit = async () => {
 .select-wrapper::after {
   content: '▼';
   font-size: 0.7rem;
-  color: #85580a;
+  color: #526078;
   position: absolute;
   right: 16px;
   top: 50%;
@@ -617,30 +616,30 @@ const handleSubmit = async () => {
 
 .word-counter {
   font-size: 0.75rem;
-  color: #78716c;
+  color: #526078;
 }
 
 .counter-limit {
-  color: #b45309;
+  color: #DC2626;
   font-weight: bold;
 }
 
 .field-help {
   font-size: 0.75rem;
-  color: #78716c;
+  color: #526078;
   margin-top: 4px;
 }
 
 .error-msg {
-  color: #dc2626;
+  color: #DC2626;
   font-size: 0.775rem;
   margin-top: 4px;
   font-weight: 600;
 }
 
 .input-error {
-  border-color: #dc2626 !important;
-  background: #fef2f2 !important;
+  border-color: #DC2626 !important;
+  background: #FEF2F2 !important;
 }
 
 .form-note-box {
@@ -648,11 +647,11 @@ const handleSubmit = async () => {
 }
 
 .form-note-box strong {
-  color: #85580a;
+  color: #9A3412;
 }
 
 .note-example {
-  color: #57534e;
+  color: #7C2D12;
   font-size: 0.775rem;
   display: inline-block;
   margin-top: 2px;
@@ -670,7 +669,7 @@ const handleSubmit = async () => {
   cursor: pointer;
   user-select: none;
   font-size: 0.9rem;
-  color: #44403c;
+  color: #10183F;
   line-height: 1.5;
 }
 
@@ -685,8 +684,8 @@ const handleSubmit = async () => {
 .checkmark {
   width: 22px;
   height: 22px;
-  background: #ffffff;
-  border: 1.5px solid rgba(197, 155, 39, 0.4);
+  background: #FFFFFF;
+  border: 1.5px solid #CBD5E1;
   border-radius: 6px;
   flex-shrink: 0;
   display: flex;
@@ -694,32 +693,31 @@ const handleSubmit = async () => {
   justify-content: center;
   margin-top: 2px;
   transition: all 0.2s ease;
-  box-shadow: 0 2px 6px rgba(184, 134, 11, 0.08);
 }
 
 .custom-checkbox:hover input ~ .checkmark {
-  border-color: #c59b27;
+  border-color: #10183F;
 }
 
 .custom-checkbox input:checked ~ .checkmark {
-  background: var(--grad-btn-gold);
-  border-color: #c59b27;
+  background: #10183F;
+  border-color: #10183F;
 }
 
 .custom-checkbox input:checked ~ .checkmark::after {
   content: '✔';
-  color: #1a1408;
+  color: #FFFFFF;
   font-size: 0.8rem;
   font-weight: 900;
 }
 
 .collab-tag {
-  color: #85580a;
+  color: #1E40AF;
   text-decoration: underline;
 }
 
 .checkbox-error .checkmark {
-  border-color: #dc2626;
+  border-color: #DC2626;
 }
 
 /* Submit Action */
@@ -761,7 +759,7 @@ const handleSubmit = async () => {
 
 .submit-security-note {
   font-size: 0.8rem;
-  color: #78716c;
+  color: #526078;
   text-align: center;
 }
 

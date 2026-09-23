@@ -43,11 +43,11 @@
           </p>
           <div class="support-badges">
             <div class="support-badge-item">
-              <span class="badge-dot gold-dot"></span>
+              <span class="badge-dot dot-green"></span>
               <span>100% Free Entry • Tamil Nadu & Puducherry</span>
             </div>
             <div class="support-badge-item">
-              <span class="badge-dot gold-dot"></span>
+              <span class="badge-dot dot-blue"></span>
               <span>Grand Finale in Chennai</span>
             </div>
           </div>
@@ -68,12 +68,12 @@
 
 <style scoped>
 .footer-wrapper {
-  background: #14120e;
-  border-top: 1px solid rgba(197, 155, 39, 0.35);
+  background: #10183F;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding: 70px 0 30px;
   position: relative;
   z-index: 10;
-  color: #e7e5e4;
+  color: #FFFFFF;
 }
 
 .footer-grid {
@@ -98,14 +98,14 @@
 .footer-logo-circle {
   width: 60px;
   height: 60px;
-  background: #ffffff;
-  border: 2px solid rgba(197, 155, 39, 0.55);
+  background: #FFFFFF;
+  border: 2px solid #E2E8F0;
   border-radius: 50%;
   padding: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
   flex-shrink: 0;
   overflow: hidden;
 }
@@ -127,7 +127,7 @@
   font-size: 0.75rem;
   font-weight: 800;
   letter-spacing: 2px;
-  color: #f87171;
+  color: #F87171;
   text-transform: uppercase;
 }
 
@@ -135,12 +135,12 @@
   font-family: var(--font-cinematic);
   font-size: 1.1rem;
   font-weight: 800;
-  color: #ffffff;
+  color: #FFFFFF;
 }
 
 .footer-tagline {
   font-size: 0.875rem;
-  color: #a8a29e;
+  color: #94A3B8;
   line-height: 1.6;
   max-width: 380px;
 }
@@ -149,9 +149,9 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: rgba(197, 155, 39, 0.15);
-  border: 1px solid rgba(197, 155, 39, 0.4);
-  color: #deb960;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #FFFFFF;
   font-size: 0.825rem;
   font-weight: 700;
   padding: 8px 16px;
@@ -161,8 +161,8 @@
 }
 
 .social-link-pill:hover {
-  background: rgba(197, 155, 39, 0.28);
-  color: #f6e27a;
+  background: rgba(255, 255, 255, 0.18);
+  color: #FFFFFF;
   transform: translateY(-2px);
 }
 
@@ -170,7 +170,7 @@
   font-family: var(--font-display);
   font-size: 1rem;
   font-weight: 700;
-  color: #f5f5f4;
+  color: #FFFFFF;
   margin-bottom: 20px;
   letter-spacing: 0.5px;
 }
@@ -183,19 +183,19 @@
 }
 
 .footer-links-list a {
-  color: #a8a29e;
+  color: #94A3B8;
   font-size: 0.875rem;
   text-decoration: none;
   transition: color 0.2s;
 }
 
 .footer-links-list a:hover {
-  color: #deb960;
+  color: #FFFFFF;
 }
 
 .contact-text {
   font-size: 0.875rem;
-  color: #a8a29e;
+  color: #94A3B8;
   line-height: 1.6;
   margin-bottom: 20px;
 }
@@ -211,35 +211,37 @@
   align-items: center;
   gap: 8px;
   font-size: 0.8rem;
-  color: #d6d3d1;
+  color: #E2E8F0;
 }
 
 .badge-dot {
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: #deb960;
 }
 
-.gold-dot {
-  background: #c59b27;
-  box-shadow: 0 0 6px rgba(197, 155, 39, 0.6);
+.dot-green {
+  background: #22C55E;
+}
+
+.dot-blue {
+  background: #60A5FA;
 }
 
 .footer-bottom {
   padding-top: 24px;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   gap: 12px;
   font-size: 0.8rem;
-  color: #78716c;
+  color: #94A3B8;
 }
 
 .built-with {
-  color: #a8a29e;
+  color: #CBD5E1;
 }
 
 @media (max-width: 860px) {

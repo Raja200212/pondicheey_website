@@ -1,7 +1,7 @@
 <template>
   <div v-if="submission" class="modal-backdrop">
-    <div class="modal-dialog glass-panel animate-pop">
-      <!-- Confetti Cannon Button Trigger / Close -->
+    <div class="modal-dialog animate-pop">
+      <!-- Close Button -->
       <button class="close-btn" @click="$emit('close')" aria-label="Close Modal">✕</button>
 
       <!-- Celebration Header -->
@@ -174,9 +174,9 @@ onMounted(() => {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(28, 25, 23, 0.75);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background: rgba(16, 24, 63, 0.7);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   z-index: 100;
   display: flex;
   align-items: center;
@@ -186,9 +186,9 @@ onMounted(() => {
 }
 
 .modal-dialog {
-  background: #ffffff;
-  border: 1.5px solid rgba(197, 155, 39, 0.6);
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25), 0 0 40px rgba(222, 185, 96, 0.2);
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 20px 50px rgba(16, 24, 63, 0.2);
   border-radius: 24px;
   max-width: 600px;
   width: 100%;
@@ -202,9 +202,9 @@ onMounted(() => {
   position: absolute;
   top: 18px;
   right: 18px;
-  background: #f5f0e6;
+  background: #F3F6FA;
   border: none;
-  color: #78716c;
+  color: #526078;
   width: 36px;
   height: 36px;
   border-radius: 50%;
@@ -217,8 +217,8 @@ onMounted(() => {
 }
 
 .close-btn:hover {
-  background: #ecd394;
-  color: #1c1917;
+  background: #E2E8F0;
+  color: #10183F;
 }
 
 .text-center {
@@ -246,50 +246,48 @@ onMounted(() => {
 
 .status-pill {
   display: inline-block;
-  background: rgba(253, 246, 226, 0.95);
-  border: 1px solid rgba(197, 155, 39, 0.5);
-  color: #85580a;
+  background: #EFF9EC;
+  border: 1px solid #BBF7D0;
+  color: #166534;
   font-size: 0.75rem;
   font-weight: 800;
   letter-spacing: 1.5px;
   padding: 4px 16px;
   border-radius: 9999px;
   margin-bottom: 12px;
-  box-shadow: 0 2px 8px rgba(184, 134, 11, 0.08);
 }
 
 .success-title {
   font-size: 1.8rem;
   font-weight: 800;
-  color: #1c1917;
+  color: #10183F;
   margin-bottom: 6px;
 }
 
 .success-subtitle {
   font-size: 0.95rem;
-  color: #57534e;
+  color: #526078;
   margin-bottom: 24px;
 }
 
 .success-subtitle strong {
-  color: #85580a;
+  color: #10183F;
 }
 
 /* ID Pass Card */
 .id-pass-card {
-  background: linear-gradient(135deg, #fffef9 0%, #faf3df 100%);
-  border: 1.5px dashed rgba(197, 155, 39, 0.7);
+  background: #EAF3FF;
+  border: 1.5px dashed #93C5FD;
   border-radius: 18px;
   padding: 22px;
   margin-bottom: 24px;
-  box-shadow: 0 6px 20px rgba(184, 134, 11, 0.08);
 }
 
 .pass-top {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid rgba(197, 155, 39, 0.2);
+  border-bottom: 1px solid #BFDBFE;
   padding-bottom: 12px;
   margin-bottom: 16px;
 }
@@ -303,11 +301,11 @@ onMounted(() => {
 .pass-logo-box {
   width: 38px;
   height: 38px;
-  background: #ffffff;
+  background: #FFFFFF;
   border-radius: 50%;
   padding: 1px;
-  border: 1px solid rgba(197, 155, 39, 0.5);
-  box-shadow: 0 2px 8px rgba(197, 155, 39, 0.2);
+  border: 1px solid #BFDBFE;
+  box-shadow: 0 2px 6px rgba(16, 24, 63, 0.08);
   flex-shrink: 0;
 }
 
@@ -327,41 +325,40 @@ onMounted(() => {
   font-size: 0.7rem;
   font-weight: 800;
   letter-spacing: 1.5px;
-  color: #c51d24;
+  color: #DC2626;
 }
 
 .rrc-tag {
   font-family: var(--font-cinematic);
   font-size: 0.85rem;
   font-weight: 800;
-  color: #14244a;
+  color: #10183F;
 }
 
 .state-tag {
   font-size: 0.7rem;
   font-weight: 800;
-  background: rgba(197, 155, 39, 0.15);
-  border: 1px solid rgba(197, 155, 39, 0.3);
+  background: #FFFFFF;
+  border: 1px solid #BFDBFE;
   padding: 4px 10px;
   border-radius: 6px;
-  color: #85580a;
+  color: #1E40AF;
 }
 
 .pass-id-block {
-  background: #ffffff;
+  background: #FFFFFF;
   border-radius: 12px;
   padding: 16px;
   text-align: center;
   margin-bottom: 18px;
-  border: 1px solid rgba(197, 155, 39, 0.35);
-  box-shadow: 0 4px 12px rgba(184, 134, 11, 0.06);
+  border: 1px solid #BFDBFE;
 }
 
 .id-label {
   font-size: 0.725rem;
   font-weight: 700;
   letter-spacing: 1.5px;
-  color: #78716c;
+  color: #526078;
   text-transform: uppercase;
   display: block;
   margin-bottom: 6px;
@@ -377,15 +374,14 @@ onMounted(() => {
 .id-code {
   font-size: clamp(1.4rem, 4vw, 1.8rem);
   font-weight: 900;
-  color: #85580a;
+  color: #10183F;
   letter-spacing: 2px;
-  text-shadow: 0 0 10px rgba(197, 155, 39, 0.2);
 }
 
 .copy-btn {
-  background: rgba(253, 246, 226, 0.95);
-  border: 1px solid rgba(197, 155, 39, 0.5);
-  color: #85580a;
+  background: #F3F6FA;
+  border: 1px solid #CBD5E1;
+  color: #10183F;
   padding: 6px 14px;
   border-radius: 8px;
   font-size: 0.8rem;
@@ -395,12 +391,11 @@ onMounted(() => {
 }
 
 .copy-btn:hover {
-  background: #ecd394;
-  color: #1a1408;
+  background: #E2E8F0;
 }
 
 .copied-text {
-  color: #059669;
+  color: #166534;
 }
 
 .pass-details-grid {
@@ -417,7 +412,7 @@ onMounted(() => {
 
 .detail-label {
   font-size: 0.7rem;
-  color: #78716c;
+  color: #526078;
   text-transform: uppercase;
   font-weight: 600;
 }
@@ -425,15 +420,15 @@ onMounted(() => {
 .detail-val {
   font-size: 0.9rem;
   font-weight: 700;
-  color: #1c1917;
+  color: #10183F;
 }
 
 .text-accent {
-  color: #85580a;
+  color: #1E40AF;
 }
 
 .pass-reel-link {
-  border-top: 1px solid rgba(197, 155, 39, 0.2);
+  border-top: 1px solid #BFDBFE;
   padding-top: 12px;
   display: flex;
   flex-direction: column;
@@ -442,7 +437,7 @@ onMounted(() => {
 
 .reel-url {
   font-size: 0.8rem;
-  color: #b45309;
+  color: #1E40AF;
   text-decoration: none;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -456,8 +451,8 @@ onMounted(() => {
 
 /* Next Steps */
 .next-steps-card {
-  background: #fbf9f4;
-  border: 1px solid rgba(197, 155, 39, 0.25);
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
   border-radius: 14px;
   padding: 16px;
   margin-bottom: 24px;
@@ -466,7 +461,7 @@ onMounted(() => {
 .next-steps-title {
   font-size: 0.9rem;
   font-weight: 800;
-  color: #85580a;
+  color: #10183F;
   margin-bottom: 10px;
 }
 
@@ -476,7 +471,7 @@ onMounted(() => {
   flex-direction: column;
   gap: 8px;
   font-size: 0.825rem;
-  color: #44403c;
+  color: #526078;
 }
 
 .steps-checklist li {
@@ -486,7 +481,7 @@ onMounted(() => {
 }
 
 .check-icon {
-  color: #059669;
+  color: #16A34A;
   font-weight: bold;
 }
 
@@ -503,7 +498,7 @@ onMounted(() => {
   justify-content: center;
   gap: 8px;
   background: #25D366;
-  color: #ffffff;
+  color: #FFFFFF;
   font-family: var(--font-display);
   font-weight: 700;
   padding: 14px 20px;
