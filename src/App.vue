@@ -1,65 +1,46 @@
 <template>
   <div class="app-root">
-    <!-- Navbar -->
+    <!-- Top Navigation Bar -->
     <Navbar />
 
+    <!-- Active Routed Page -->
     <main>
-      <!-- Section 1: Hero Section -->
-      <HeroSection />
-
-      <!-- Section 2: Quick Highlights Bar -->
-      <HighlightsBar />
-
-      <!-- Section 3: About We The Leaders & Reel Competition -->
-      <AboutSection />
-
-      <!-- Section 4: Reel Themes & Content Topics -->
-      <ContentTopics />
-
-      <!-- Section 5: Prize Pool & Awards -->
-      <PrizePoolSection />
-
-      <!-- Section 6: Judging Criteria -->
-      <JudgingCriteria />
-
-      <!-- Section 7 & 8: Important Rules & Event Timeline -->
-      <RulesTimeline />
-
-      <!-- Section 9: Registration & Reel Submission Form -->
-      <RegistrationForm @submitted="handleSubmissionSuccess" />
+      <router-view @submitted="handleSubmissionSuccess" />
     </main>
 
-    <!-- Footer -->
+    <!-- Site Footer -->
     <Footer />
 
-    <!-- Section 10: Post Submission Success Screen Modal -->
+    <!-- Global Registration & Submit Reel Popup Modal -->
+    <RegistrationModal @submitted="handleSubmissionSuccess" />
+
+    <!-- Global Post Submission Success Screen Modal -->
     <SuccessModal
       v-if="latestSubmission"
       :submission="latestSubmission"
       @close="latestSubmission = null"
     />
+
+    <!-- Quick Floating Contact Buttons (Call, WhatsApp, Email) -->
+    <FloatingContact />
   </div>
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, provide } from 'vue'
 import Navbar from './components/Navbar.vue'
-import HeroSection from './components/HeroSection.vue'
-import HighlightsBar from './components/HighlightsBar.vue'
-import AboutSection from './components/AboutSection.vue'
-import ContentTopics from './components/ContentTopics.vue'
-import PrizePoolSection from './components/PrizePoolSection.vue'
-import JudgingCriteria from './components/JudgingCriteria.vue'
-import RulesTimeline from './components/RulesTimeline.vue'
-import RegistrationForm from './components/RegistrationForm.vue'
-import SuccessModal from './components/SuccessModal.vue'
 import Footer from './components/Footer.vue'
+import RegistrationModal from './components/RegistrationModal.vue'
+import SuccessModal from './components/SuccessModal.vue'
+import FloatingContact from './components/FloatingContact.vue'
 
 const latestSubmission = ref(null)
 
 const handleSubmissionSuccess = (submissionData) => {
   latestSubmission.value = submissionData
 }
+
+provide('onSubmissionSuccess', handleSubmissionSuccess)
 </script>
 
 <style>

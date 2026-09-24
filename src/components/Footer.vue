@@ -4,7 +4,7 @@
       <div class="footer-grid">
         <!-- Brand Info -->
         <div class="footer-brand-col">
-          <div class="footer-logo">
+          <router-link to="/" class="footer-logo">
             <div class="footer-logo-circle">
               <img src="/logo.png" alt="We The Leaders Logo" class="footer-logo-img" />
             </div>
@@ -12,7 +12,7 @@
               <span class="footer-org">WE THE LEADERS</span>
               <span class="footer-event">REELS FOR REAL CHANGE</span>
             </div>
-          </div>
+          </router-link>
           <p class="footer-tagline">
             Tamil Nadu State-Level Reel Competition empowering creators to inspire society through powerful 3-minute video narratives.
           </p>
@@ -27,12 +27,14 @@
         <div class="footer-links-col">
           <h4 class="footer-heading">Quick Navigation</h4>
           <ul class="footer-links-list">
-            <li><a href="#about">About We The Leaders</a></li>
-            <li><a href="#content-themes">Reel Themes & Topics</a></li>
-            <li><a href="#prizes">Prize Pool & Awards</a></li>
-            <li><a href="#judging">Judging Criteria</a></li>
-            <li><a href="#rules">Rules & Guidelines</a></li>
-            <li><a href="#register">Submit Your Reel</a></li>
+            <li><router-link to="/">Home Page</router-link></li>
+            <li><router-link to="/about">About We The Leaders</router-link></li>
+            <li><router-link to="/themes">Reel Themes & Topics</router-link></li>
+            <li><router-link to="/content">Creator & Content Guide</router-link></li>
+            <li><router-link to="/prizes">Prize Pool & Awards</router-link></li>
+            <li><router-link to="/judging">Judging Criteria</router-link></li>
+            <li><router-link to="/rules">Rules & Guidelines</router-link></li>
+            <li><router-link to="/register">Submit Your Reel</router-link></li>
           </ul>
         </div>
 
@@ -42,6 +44,16 @@
           <p class="contact-text">
             For collaboration, campus partnership, or submission inquiries, reach out to the We The Leaders organizing committee.
           </p>
+
+          <div class="footer-contact-links">
+            <a href="mailto:reels4realchange.wtl@gmail.com" class="footer-contact-item">
+              <span>✉️ reels4realchange.wtl@gmail.com</span>
+            </a>
+            <a href="tel:9677861461" class="footer-contact-item">
+              <span>📞 +91 9677861461</span>
+            </a>
+          </div>
+
           <div class="support-badges">
             <div class="support-badge-item">
               <span class="badge-dot dot-green"></span>
@@ -50,6 +62,10 @@
             <div class="support-badge-item">
               <span class="badge-dot dot-blue"></span>
               <span>Grand Finale in Chennai</span>
+            </div>
+            <div class="support-badge-item">
+              <span class="badge-dot dot-cert"></span>
+              <span>Guaranteed Digital Certificate</span>
             </div>
           </div>
         </div>
@@ -94,6 +110,7 @@
   display: flex;
   align-items: center;
   gap: 14px;
+  text-decoration: none;
 }
 
 .footer-logo-circle {
@@ -190,15 +207,38 @@
   transition: color 0.2s;
 }
 
-.footer-links-list a:hover {
-  color: #FFFFFF;
+.footer-links-list a:hover,
+.footer-links-list a.router-link-exact-active {
+  color: #60A5FA;
 }
 
 .contact-text {
   font-size: 0.875rem;
   color: #94A3B8;
   line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.footer-contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
   margin-bottom: 20px;
+}
+
+.footer-contact-item {
+  color: #93C5FD;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s;
+  display: inline-flex;
+  align-items: center;
+}
+
+.footer-contact-item:hover {
+  color: #FFFFFF;
+  text-decoration: underline;
 }
 
 .support-badges {
@@ -227,6 +267,10 @@
 
 .dot-blue {
   background: #3B82F6;
+}
+
+.dot-cert {
+  background: #93C5FD;
 }
 
 .footer-bottom {

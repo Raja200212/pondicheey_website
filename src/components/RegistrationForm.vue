@@ -1,7 +1,7 @@
 <template>
-  <section id="register" class="registration-section">
-    <div class="container-custom">
-      <div class="section-header text-center">
+  <section id="register" class="registration-section" :class="{ 'modal-form-mode': isModalMode }">
+    <div :class="isModalMode ? '' : 'container-custom'">
+      <div v-if="!isModalMode" class="section-header text-center">
         <span class="section-badge">OFFICIAL ENTRY FORM</span>
         <h2 class="section-title">
           Register & <span class="text-gradient-hero">Submit Your Reel</span>
@@ -11,7 +11,7 @@
         </p>
       </div>
 
-      <div class="form-wrapper glass-panel">
+      <div class="form-wrapper" :class="isModalMode ? 'modal-form-wrapper' : 'glass-panel'">
         <form @submit.prevent="handleSubmit" novalidate class="submission-form">
           <!-- Section 1: Creator Details -->
           <div class="form-group-section">
@@ -320,6 +320,13 @@ import { ref, computed } from 'vue'
 import { DISTRICTS } from '../data/districts.js'
 import { submitToGoogleSheet } from '../services/submissionService.js'
 
+const props = defineProps({
+  isModalMode: {
+    type: Boolean,
+    default: false
+  }
+})
+
 const emit = defineEmits(['submitted'])
 
 const districts = DISTRICTS
@@ -488,6 +495,18 @@ const handleSubmit = async () => {
   padding: 90px 0;
   position: relative;
   background-color: #FFFFFF;
+}
+
+.modal-form-mode {
+  padding: 0 !important;
+  background: transparent !important;
+}
+
+.modal-form-wrapper {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
 }
 
 .text-center {

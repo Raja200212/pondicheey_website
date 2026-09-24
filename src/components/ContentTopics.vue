@@ -83,61 +83,81 @@
                 </div>
               </div>
 
-              <a href="#register" class="btn-primary w-full text-center">
+              <button class="btn-primary w-full text-center" @click="openRegisterModal">
                 <span>I Have a Concept — Register Now</span>
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-              </a>
+              </button>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- All 6 Themes Grid Overview -->
-      <div class="all-themes-grid">
-        <div
-          v-for="(theme, idx) in themes"
-          :key="theme.id"
-          class="theme-mini-card card-glow"
-          :class="{ 'card-active-border': activeThemeIndex === idx }"
-          @click="activeThemeIndex = idx"
-        >
-          <div class="mini-icon-box">{{ theme.icon }}</div>
-          <div class="mini-content">
-            <h4 class="mini-title">{{ theme.title }}</h4>
-            <p class="mini-summary">{{ theme.shortSummary }}</p>
-          </div>
-          <span class="explore-arrow">→</span>
-        </div>
-      </div>
+      <!-- Content Guidelines: Do's & Don'ts Section -->
+      <div class="guidelines-section-wrap">
+        <div class="guidelines-container">
+          <!-- Winning Practices (DO's) -->
+          <div class="guideline-card dos-card">
+            <div class="guideline-header">
+              <div class="header-icon-box icon-dos">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </div>
+              <h3 class="card-headline">Content DO's (Winning Practices)</h3>
+            </div>
 
-      <!-- Content Guidelines: Do's & Don'ts Strip -->
-      <div class="guidelines-container">
-        <div class="guideline-card dos-card">
-          <div class="guideline-header">
-            <span class="guideline-icon">✅</span>
-            <h3>Content DO's (Winning Practices)</h3>
-          </div>
-          <ul class="guideline-list">
-            <li><strong>Hook in 3 Seconds:</strong> Grab attention immediately with dynamic framing or powerful opening dialogue.</li>
-            <li><strong>Constructive Takeaway:</strong> Conclude with an inspiring solution, call to action, or uplifting perspective.</li>
-            <li><strong>Clear Audio & Subtitles:</strong> Ensure dialogue is crystal clear; add Tamil/English subtitles for wider reach.</li>
-            <li><strong>Original Footage:</strong> Capture real shots, authentic acting, and genuine local storytelling.</li>
-            <li><strong>Mandatory Collab:</strong> Post publicly on Instagram & send collaboration request to <strong>@wtl_leadingthechange</strong>.</li>
-          </ul>
-        </div>
+            <div class="guideline-items-list">
+              <div class="g-item">
+                <p class="g-item-text"><strong>Hook in 3 Seconds:</strong> Grab attention immediately with dynamic framing or powerful opening dialogue.</p>
+              </div>
 
-        <div class="guideline-card donts-card">
-          <div class="guideline-header">
-            <span class="guideline-icon">🚫</span>
-            <h3>Content DON'Ts (Avoid Disqualification)</h3>
+              <div class="g-item">
+                <p class="g-item-text"><strong>Constructive Takeaway:</strong> Conclude with an inspiring solution, call to action, or uplifting perspective.</p>
+              </div>
+
+              <div class="g-item">
+                <p class="g-item-text"><strong>Clear Audio & Subtitles:</strong> Ensure dialogue is crystal clear; add Tamil/English subtitles for wider reach.</p>
+              </div>
+
+              <div class="g-item">
+                <p class="g-item-text"><strong>Original Footage:</strong> Capture real shots, authentic acting, and genuine local storytelling.</p>
+              </div>
+
+              <div class="g-item">
+                <p class="g-item-text"><strong>Mandatory Collab:</strong> Post publicly on Instagram & send collaboration request to @wtl_leadingthechange.</p>
+              </div>
+            </div>
           </div>
-          <ul class="guideline-list">
-            <li><strong>No Exceeding 3 Minutes:</strong> Keep duration strictly between 30 seconds and 3 minutes.</li>
-            <li><strong>No Copyright Infringement:</strong> Avoid using uncredited full film clips or unauthorized copyrighted visuals.</li>
-            <li><strong>No Hate Speech or Defamation:</strong> Content promoting hostility, vulgarity, or targeted defamation is strictly disqualified.</li>
-            <li><strong>No Dangerous Stunts:</strong> Do not perform or showcase unsafe, illegal, or hazardous activities without safety measures.</li>
-            <li><strong>No Private Accounts:</strong> Do not keep your Instagram profile on private mode during the evaluation period.</li>
-          </ul>
+
+          <!-- Avoid Disqualification (DON'Ts) -->
+          <div class="guideline-card donts-card">
+            <div class="guideline-header">
+              <div class="header-icon-box icon-donts">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg>
+              </div>
+              <h3 class="card-headline">Content DON'Ts (Avoid Disqualification)</h3>
+            </div>
+
+            <div class="guideline-items-list">
+              <div class="g-item">
+                <p class="g-item-text"><strong>No Exceeding 3 Minutes:</strong> Keep duration strictly between 30 seconds and 3 minutes.</p>
+              </div>
+
+              <div class="g-item">
+                <p class="g-item-text"><strong>No Copyright Infringement:</strong> Avoid using uncredited full film clips or unauthorized copyrighted visuals.</p>
+              </div>
+
+              <div class="g-item">
+                <p class="g-item-text"><strong>No Hate Speech or Defamation:</strong> Content promoting hostility, vulgarity, or targeted defamation is strictly disqualified.</p>
+              </div>
+
+              <div class="g-item">
+                <p class="g-item-text"><strong>No Dangerous Stunts:</strong> Do not perform or showcase unsafe, illegal, or hazardous activities without safety measures.</p>
+              </div>
+
+              <div class="g-item">
+                <p class="g-item-text"><strong>No Private Accounts:</strong> Do not keep your Instagram profile on private mode during the evaluation period.</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -146,7 +166,9 @@
 
 <script setup>
 import { ref, computed } from 'vue'
+import { useRegisterModal } from '../composables/useRegisterModal'
 
+const { openRegisterModal } = useRegisterModal()
 const activeThemeIndex = ref(0)
 
 const themes = [
@@ -515,136 +537,97 @@ const currentTheme = computed(() => themes[activeThemeIndex.value])
   color: #FFFFFF;
 }
 
-/* All Themes Grid */
-.all-themes-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
-  margin-bottom: 50px;
+/* Do's & Don'ts Section */
+.guidelines-section-wrap {
+  margin-top: 48px;
+  padding-top: 10px;
 }
 
-.theme-mini-card {
-  background: #FFFFFF;
-  border: 1px solid #E2E8F0;
-  border-radius: 16px;
-  padding: 20px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  transition: all 0.25s ease;
-}
-
-.theme-mini-card:hover {
-  transform: translateY(-4px);
-  border-color: #2563EB;
-  box-shadow: 0 8px 24px rgba(37, 99, 235, 0.12);
-}
-
-.card-active-border {
-  border-color: #2563EB;
-  background: #EFF6FF;
-}
-
-.mini-icon-box {
-  width: 44px;
-  height: 44px;
-  border-radius: 12px;
-  background: #EFF6FF;
-  border: 1px solid #BFDBFE;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.4rem;
-  flex-shrink: 0;
-}
-
-.mini-content {
-  flex-grow: 1;
-}
-
-.mini-title {
-  font-family: var(--font-display);
-  font-size: 0.95rem;
-  font-weight: 700;
-  color: #10183F;
-  margin-bottom: 3px;
-}
-
-.mini-summary {
-  font-size: 0.775rem;
-  color: #526078;
-  line-height: 1.4;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-
-.explore-arrow {
-  color: #2563EB;
-  font-weight: bold;
-  font-size: 1.1rem;
-}
-
-/* Do's & Don'ts */
 .guidelines-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 24px;
+  gap: 28px;
 }
 
 .guideline-card {
-  border-radius: 20px;
-  padding: 30px 24px;
-  border: 1px solid #E2E8F0;
+  border-radius: 22px;
+  padding: 34px 30px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.guideline-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(16, 24, 63, 0.08);
 }
 
 .dos-card {
-  background: #EFF6FF;
-  border-color: #BFDBFE;
+  background-color: #EEF6FF;
+  border: 1px solid #BFDBFE;
 }
 
 .donts-card {
-  background: #F8FAFC;
-  border-color: #E2E8F0;
+  background-color: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 4px 20px rgba(16, 24, 63, 0.03);
 }
 
 .guideline-header {
   display: flex;
   align-items: center;
-  gap: 10px;
-  margin-bottom: 20px;
-  padding-bottom: 12px;
-  border-bottom: 1px solid rgba(16, 24, 63, 0.08);
+  gap: 12px;
+  margin-bottom: 24px;
 }
 
-.guideline-icon {
-  font-size: 1.5rem;
+.header-icon-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
 }
 
-.guideline-header h3 {
-  font-family: var(--font-display);
-  font-size: 1.15rem;
+.icon-dos {
+  width: 26px;
+  height: 26px;
+  background-color: #22C55E;
+  color: #FFFFFF;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(34, 197, 94, 0.3);
+}
+
+.icon-donts {
+  width: 26px;
+  height: 26px;
+  color: #EF4444;
+}
+
+.card-headline {
+  font-family: var(--font-cinematic);
+  font-size: 1.25rem;
   font-weight: 800;
   color: #10183F;
+  letter-spacing: -0.01em;
 }
 
-.guideline-list {
-  list-style: none;
+.guideline-items-list {
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  font-size: 0.85rem;
-  color: #10183F;
+  gap: 16px;
 }
 
-.guideline-list li {
-  line-height: 1.5;
+.g-item {
+  display: block;
 }
 
-.guideline-list strong {
+.g-item-text {
+  font-size: 0.925rem;
+  color: #475569;
+  line-height: 1.65;
+}
+
+.g-item-text strong {
   color: #10183F;
+  font-weight: 700;
 }
 
 .animate-fade {
@@ -660,14 +643,15 @@ const currentTheme = computed(() => themes[activeThemeIndex.value])
   .theme-card-grid {
     grid-template-columns: 1fr;
   }
-  .all-themes-grid {
-    grid-template-columns: 1fr;
-  }
   .guidelines-container {
     grid-template-columns: 1fr;
+    gap: 20px;
   }
   .active-theme-card {
     padding: 24px 18px;
+  }
+  .guideline-card {
+    padding: 26px 20px;
   }
 }
 </style>
