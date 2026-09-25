@@ -25,10 +25,6 @@
             <p>Often, young people have brilliant ideas for social improvement but lack the platform or resources to execute them. This initiative was created to bridge that gap. We want to prove that you don't need to be in a position of power to create real change—you just need the dedication to start.</p>
           </div>
         </div>
-        
-        <div class="image-wrapper">
-          <img src="/about-img-back.jpg" alt="Community Collaboration" class="single-image" />
-        </div>
       </div>
     </div>
   </div>
@@ -64,9 +60,9 @@
 }
 
 .editorial-grid {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 60px;
+  display: block;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .e-content h2 {

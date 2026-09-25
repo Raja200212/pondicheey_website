@@ -6,9 +6,7 @@
     <!-- Active Routed Page -->
     <main>
       <router-view v-slot="{ Component }">
-        <transition name="page-transition" mode="out-in">
-          <component :is="Component" @submitted="handleSubmissionSuccess" />
-        </transition>
+        <component :is="Component" @submitted="handleSubmissionSuccess" />
       </router-view>
     </main>
 

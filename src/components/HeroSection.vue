@@ -67,30 +67,6 @@
             <!-- RIGHT 50%: Carousel Image Showcase Column -->
             <div class="slide-right-visual">
               <img :src="slide.featuredImage" :alt="slide.titleHighlight" class="visual-main-img" />
-              
-              <!-- Floating Top-Left Tag Badge -->
-              <div class="floating-visual-badge badge-top-left">
-                <span class="f-badge-icon">{{ slide.badgeIcon }}</span>
-                <span class="f-badge-txt">{{ slide.visualTag }}</span>
-              </div>
-
-              <!-- Floating Top-Right Stat Chip -->
-              <div class="floating-visual-badge badge-top-right">
-                <span class="f-stat-star">⭐</span>
-                <span class="f-stat-txt">{{ slide.floatingStatTop }}</span>
-              </div>
-
-              <!-- Floating Bottom Metric Pill -->
-              <div class="floating-visual-badge badge-bottom-right">
-                <span class="f-dot-pulse"></span>
-                <span class="f-stat-txt">{{ slide.floatingStatBottom }}</span>
-              </div>
-
-              <!-- Small Bottom Glassmorphic Caption Card -->
-              <div class="visual-caption-glass">
-                <div class="caption-metric-sub">{{ slide.visualSub }}</div>
-                <h3 class="caption-heading">{{ slide.visualTitle }}</h3>
-              </div>
             </div>
           </div>
         </div>
@@ -120,13 +96,13 @@ let autoSlideTimer = null
 const slides = [
   {
     id: 1,
-    featuredImage: '/tn-map-3d.jpg',
+    featuredImage: '/tn-map-3d-nobg.png',
     badgeIcon: '🗺️',
     badgeText: 'STATE-WIDE REEL COMPETITION • 38+1 DISTRICTS',
     titlePrefix: 'Create a 3-Minute Reel,',
     titleHighlight: 'Inspire Tamil Nadu',
     titleSuffix: '& Win Big',
-    description: 'Tamil Nadu & Puducherry State-Level Short-Form Reel Competition. 38+1 districts connected through creative youth filmmaking.',
+    description: 'Welcome to the ultimate Tamil Nadu & Puducherry State-Level Short-Form Reel Competition. We are connecting all 38+1 districts through the powerful lens of creative youth filmmaking. This is your chance to showcase your talent, tell a story that matters, and proudly represent your district on the grandest stage possible.',
     pills: [
       { icon: '🔥', text: '100% Free Registration' },
       { icon: '🗺️', text: '38+1 Districts Live' },
@@ -145,13 +121,13 @@ const slides = [
   },
   {
     id: 2,
-    featuredImage: '/youngster_awareness_new.jpg',
+    featuredImage: '/youth-awareness-3d-nobg.png',
     badgeIcon: '⚡',
     badgeText: 'YOUTH LEADERSHIP & SOCIAL AWARENESS',
     titlePrefix: 'Empowering Youngsters To',
     titleHighlight: 'Drive Real Change',
     titleSuffix: 'Through Reels',
-    description: 'Grab your smartphone, tell authentic stories of youth leadership, social awareness, civic pride, environment, and equality that inspire the state.',
+    description: 'Grab your smartphone and start directing! We want you to tell authentic, powerful stories focusing on youth leadership, social awareness, civic pride, environmental sustainability, and gender equality. Your 3-minute reel has the potential to spark meaningful conversations, challenge perspectives, and truly inspire the entire state.',
     pills: [
       { icon: '🎬', text: '3-Minute Short Stories' },
       { icon: '💡', text: '6 Impact Themes' },
@@ -170,13 +146,13 @@ const slides = [
   },
   {
     id: 3,
-    featuredImage: '/awards-trophy.jpg',
+    featuredImage: '/prize-trophy-nobg.png',
     badgeIcon: '🏆',
     badgeText: 'HONORS, TROPHIES & ₹90,000+ CASH REWARDS',
     titlePrefix: 'Win Big with',
     titleHighlight: '₹90,000+ Cash Prizes',
     titleSuffix: '& State Trophy',
-    description: '₹50,000 Champion Cash Prize, 15+ Category Winner Trophies, official Certificates of Excellence, and live Grand Finale screening in Chennai with cinema icons.',
+    description: 'Your creativity deserves to be rewarded. Compete for a massive ₹50,000 Champion Cash Prize, alongside 15+ specialized Category Winner Trophies and official Certificates of Excellence. Top creators will be invited to a spectacular live Grand Finale screening in Chennai, where your work will be showcased in front of renowned cinema icons and industry leaders.',
     pills: [
       { icon: '🥇', text: '₹50,000 1st Prize Cash' },
       { icon: '🏆', text: '15+ Category Trophies' },
@@ -273,33 +249,36 @@ onUnmounted(() => {
   opacity: 0;
 }
 
-/* 50% Left + 50% Right Desktop Two-Column Layout */
+/* Full-Width Background Layout */
 .slide-grid-layout {
-  display: flex;
+  position: relative;
   width: 100%;
   height: 100%;
-  align-items: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 /* LEFT 50%: Content Column */
 .slide-left-content {
+  position: relative;
+  z-index: 10;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 50%;
+  height: 100%;
+  width: 55%;
   padding-left: calc(max(20px, (100% - 1240px) / 2));
   padding-right: 40px;
-  padding-top: 10px;
-  padding-bottom: 10px;
 }
 
 .slide-badge-pill {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  background: rgba(37, 99, 235, 0.1);
-  border: 1px solid rgba(37, 99, 235, 0.3);
-  color: #1D4ED8;
+  background: #F0F9FF;
+  border: 1px solid #BAE6FD;
+  color: #0369A1;
   padding: 5px 13px;
   border-radius: 9999px;
   font-family: var(--font-display);
@@ -308,7 +287,7 @@ onUnmounted(() => {
   letter-spacing: 0.8px;
   text-transform: uppercase;
   width: fit-content;
-  margin-bottom: 14px;
+  margin-bottom: 24px;
   backdrop-filter: blur(8px);
 }
 
@@ -331,45 +310,46 @@ onUnmounted(() => {
   font-family: var(--font-cinematic);
   font-size: clamp(1.8rem, 2.5vw, 2.5rem);
   font-weight: 900;
-  color: #0F172A;
+  color: #01579B;
   line-height: 1.15;
   letter-spacing: -0.5px;
-  margin-bottom: 8px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
 }
 
 .title-gradient-span {
-  background: linear-gradient(135deg, #60A5FA 0%, #F59E0B 100%);
+  background: linear-gradient(90deg, #00A859 0%, #FFD700 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .slide-description {
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   color: #475569;
-  line-height: 1.45;
-  max-width: 520px;
-  margin-bottom: 14px;
+  line-height: 1.75;
+  max-width: 580px;
+  margin-bottom: 32px;
 }
 
 /* Chips Row */
 .slide-chips-row {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
-  margin-bottom: 14px;
+  gap: 12px;
+  margin-bottom: 32px;
 }
 
 .slide-chip-tag {
   display: inline-flex;
   align-items: center;
   gap: 5px;
-  background: #F8FAFC;
-  border: 1px solid #E2E8F0;
+  background: #F0F9FF;
+  border: 1px solid #BAE6FD;
   padding: 5px 12px;
   border-radius: 9999px;
   font-size: 0.78rem;
   font-weight: 600;
-  color: #334155;
+  color: #0369A1;
   backdrop-filter: blur(6px);
 }
 
@@ -378,8 +358,8 @@ onUnmounted(() => {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 12px;
-  margin-bottom: 14px;
+  gap: 16px;
+  margin-bottom: 28px;
 }
 
 .hero-main-cta {
@@ -389,7 +369,9 @@ onUnmounted(() => {
   font-weight: 800;
   padding: 13px 26px;
   border-radius: 10px;
-  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.4);
+  background: #00A859 !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 8px 20px rgba(0, 168, 89, 0.4) !important;
 }
 
 .btn-text-content {
@@ -459,21 +441,20 @@ onUnmounted(() => {
   position: relative;
   width: 50%;
   display: flex;
-  align-items: stretch;
+  align-items: center;
   justify-content: center;
   padding: 0;
+  min-height: 400px;
 }
 
 .visual-main-img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
+  max-height: 80vh;
+  object-fit: contain;
   object-position: center;
-  -webkit-mask-image: radial-gradient(ellipse at center, black 70%, transparent 100%);
-  mask-image: radial-gradient(ellipse at center, black 70%, transparent 100%);
 }
 
-/* Floating Badges Over Image */
 .floating-visual-badge {
   position: absolute;
   display: inline-flex;
@@ -487,31 +468,25 @@ onUnmounted(() => {
   letter-spacing: 0.6px;
   backdrop-filter: blur(10px);
   z-index: 6;
-  box-shadow: 0 5px 14px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 5px 14px rgba(0, 0, 0, 0.08);
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid #E1F5FE;
+  color: #01579B;
 }
 
 .badge-top-left {
   top: 24px;
   left: 24px;
-  background: rgba(11, 17, 44, 0.9);
-  border: 1px solid rgba(59, 130, 246, 0.55);
-  color: #93C5FD;
 }
 
 .badge-top-right {
   top: 24px;
   right: 24px;
-  background: rgba(15, 23, 42, 0.9);
-  border: 1px solid rgba(245, 158, 11, 0.55);
-  color: #FDE68A;
 }
 
 .badge-bottom-right {
   bottom: 84px;
   right: 24px;
-  background: rgba(15, 23, 42, 0.9);
-  border: 1px solid rgba(16, 185, 129, 0.55);
-  color: #A7F3D0;
 }
 
 .f-dot-pulse {
@@ -533,23 +508,23 @@ onUnmounted(() => {
   display: flex;
   flex-direction: column;
   gap: 4px;
-  background: linear-gradient(to top, rgba(8, 13, 36, 0.96) 0%, rgba(8, 13, 36, 0.6) 80%, transparent 100%);
+  background: transparent;
 }
 
 .caption-metric-sub {
   font-family: var(--font-display);
-  font-size: 0.65rem;
+  font-size: 0.85rem;
   font-weight: 800;
   letter-spacing: 1px;
-  color: #F59E0B;
+  color: #00A859;
   text-transform: uppercase;
 }
 
 .caption-heading {
   font-family: var(--font-cinematic);
-  font-size: 1.25rem;
-  font-weight: 800;
-  color: #FFFFFF;
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: #01579B;
   margin: 0;
   line-height: 1.25;
 }
