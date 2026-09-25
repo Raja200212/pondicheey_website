@@ -1,106 +1,75 @@
 <template>
-  <section id="rules" class="rules-section">
+  <section class="how-it-works-timeline">
     <div class="container-custom">
-      <div class="section-header text-center">
-        <span class="section-badge">ESSENTIAL INFORMATION</span>
-        <h2 class="section-title">
-          Rules, Guidelines & <span class="text-gradient-hero">Timeline</span>
-        </h2>
-        <p class="section-subtitle">
-          Everything you need to know before submitting your masterpiece.
-        </p>
-      </div>
-
-      <div class="rules-timeline-grid">
-        <!-- Left: Important Rules -->
-        <div class="rules-box glass-panel">
-          <div class="box-header">
-            <span class="header-icon">📜</span>
-            <h3 class="box-title">Important Rules & Guidelines</h3>
-          </div>
-
-          <div class="rules-list">
-            <div class="rule-card">
-              <div class="rule-badge badge-blue">⏱️ Duration</div>
-              <h4>Maximum 3 Minutes</h4>
-              <p>Reels should be between 30 seconds to 3 minutes in length. Ensure your narrative is tight and impactful.</p>
-            </div>
-
-            <div class="rule-card">
-              <div class="rule-badge badge-orange">🗣️ Language</div>
-              <h4>Tamil / English / Silent with Subtitles</h4>
-              <p>Content can be in Tamil, English, or silent/visual storytelling. Adding clear subtitles is strongly encouraged.</p>
-            </div>
-
-            <div class="rule-card">
-              <div class="rule-badge badge-green">✨ Originality</div>
-              <h4>100% Original Content</h4>
-              <p>Must be original creative work created by the participant or team. Plagiarized clips will be disqualified.</p>
-            </div>
-
-            <div class="rule-card">
-              <div class="rule-badge badge-blue">📍 Eligibility</div>
-              <h4>Open to All Youth & Creators</h4>
-              <p>Open to students, creators, indie filmmakers, and enthusiasts across all districts of Tamil Nadu & Puducherry.</p>
-            </div>
-          </div>
+      <!-- 5. HOW IT WORKS -->
+      <div class="how-it-works">
+        <div class="section-header-center">
+          <span class="section-badge">PROCESS</span>
+          <h2 class="section-title">How It Works</h2>
+          <p class="section-desc-center">Your journey to creating real social impact starts here. Follow these four simple steps.</p>
         </div>
 
-        <!-- Right: Event Timeline -->
-        <div class="timeline-box glass-panel">
-          <div class="box-header">
-            <span class="header-icon">⏳</span>
-            <h3 class="box-title">Official Event Timeline</h3>
+        <div class="steps-journey">
+          <div class="step-card">
+            <div class="step-num">01</div>
+            <h3>Discover</h3>
+            <p>Identify a social issue in your community that you are passionate about.</p>
           </div>
+          <div class="step-connector"></div>
+          <div class="step-card">
+            <div class="step-num">02</div>
+            <h3>Create</h3>
+            <p>Develop a creative solution or story that addresses the issue effectively.</p>
+          </div>
+          <div class="step-connector"></div>
+          <div class="step-card">
+            <div class="step-num">03</div>
+            <h3>Take Action</h3>
+            <p>Implement your idea and document your journey to share with the world.</p>
+          </div>
+          <div class="step-connector"></div>
+          <div class="step-card">
+            <div class="step-num">04</div>
+            <h3>Create Impact</h3>
+            <p>Inspire others, scale your project, and become a recognized leader.</p>
+          </div>
+        </div>
+      </div>
 
-          <div class="timeline-stepper">
-            <!-- Step 1 -->
-            <div class="timeline-step step-completed">
-              <div class="step-indicator">
-                <span class="pulse-ring"></span>
-                <span class="step-dot active">1</span>
-              </div>
-              <div class="step-content">
-                <span class="step-date active-date">LIVE NOW</span>
-                <h4 class="step-title">Registration & Submission Opens</h4>
-                <p class="step-desc">Free online registrations and reel link submissions are officially open.</p>
-              </div>
+      <!-- 8. IMPORTANT DATES -->
+      <div class="timeline-section">
+        <div class="section-header-center">
+          <span class="section-badge">TIMELINE</span>
+          <h2 class="section-title">Important Dates</h2>
+        </div>
+
+        <div class="timeline-container">
+          <div class="timeline-item">
+            <div class="t-date">Oct 15</div>
+            <div class="t-content">
+              <h4>Registrations Open</h4>
+              <p>Start your journey by signing up for the initiative.</p>
             </div>
-
-            <!-- Step 2 -->
-            <div class="timeline-step">
-              <div class="step-indicator">
-                <span class="step-dot highlight">2</span>
-              </div>
-              <div class="step-content">
-                <span class="step-date deadline-date">OCTOBER 25</span>
-                <h4 class="step-title">Last Date for Submission</h4>
-                <p class="step-desc">Portals close at 11:59 PM. Make sure your Instagram reel is public and collab request sent.</p>
-              </div>
+          </div>
+          <div class="timeline-item">
+            <div class="t-date">Nov 30</div>
+            <div class="t-content">
+              <h4>Submission Deadline</h4>
+              <p>Submit your project documentation and impact report.</p>
             </div>
-
-            <!-- Step 3 -->
-            <div class="timeline-step">
-              <div class="step-indicator">
-                <span class="step-dot dot-blue">3</span>
-              </div>
-              <div class="step-content">
-                <span class="step-date">MID-NOVEMBER</span>
-                <h4 class="step-title">Top Shortlist Announcement</h4>
-                <p class="step-desc">Jury evaluates entries and announces finalists invited to the state gala.</p>
-              </div>
+          </div>
+          <div class="timeline-item">
+            <div class="t-date">Dec 15</div>
+            <div class="t-content">
+              <h4>Finalists Announced</h4>
+              <p>Top projects are selected for the final showcase.</p>
             </div>
-
-            <!-- Step 4 -->
-            <div class="timeline-step">
-              <div class="step-indicator">
-                <span class="step-dot finale-dot">🏆</span>
-              </div>
-              <div class="step-content">
-                <span class="step-date finale-date">GRAND FINALE • CHENNAI</span>
-                <h4 class="step-title">Award Ceremony & Celebrity Jury Meet</h4>
-                <p class="step-desc">Live screening, celebrity award handovers, and networking in Chennai (Date & Venue to be updated).</p>
-              </div>
+          </div>
+          <div class="timeline-item highlight">
+            <div class="t-date">Jan 10</div>
+            <div class="t-content">
+              <h4>Grand Showcase Event</h4>
+              <p>Celebrate the leaders and award the prize pool.</p>
             </div>
           </div>
         </div>
@@ -109,281 +78,250 @@
   </section>
 </template>
 
-<script setup>
-</script>
-
 <style scoped>
-.rules-section {
-  padding: 90px 0;
-  position: relative;
-  background-color: #F3F6FA;
+.how-it-works-timeline {
+  padding: 120px 0;
+  background-color: var(--bg-primary);
 }
 
-.text-center {
+.section-header-center {
   text-align: center;
-}
-
-.section-header {
-  max-width: 720px;
-  margin: 0 auto 50px;
+  max-width: 600px;
+  margin: 0 auto 60px;
 }
 
 .section-badge {
   display: inline-block;
   font-family: var(--font-display);
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   font-weight: 800;
   letter-spacing: 2px;
-  color: #2563EB;
+  color: var(--brand-coral);
+  margin-bottom: 16px;
   text-transform: uppercase;
-  margin-bottom: 12px;
-  background: #EFF6FF;
-  padding: 5px 16px;
-  border-radius: 9999px;
-  border: 1px solid #BFDBFE;
 }
 
 .section-title {
-  font-family: var(--font-cinematic);
-  font-size: clamp(2rem, 3.5vw, 2.8rem);
-  font-weight: 800;
-  color: #10183F;
-  line-height: 1.2;
-  margin-bottom: 12px;
-}
-
-.section-subtitle {
-  color: #526078;
-  font-size: 1.1rem;
-}
-
-.rules-timeline-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 32px;
-}
-
-.rules-box, .timeline-box {
-  background: #FFFFFF;
-  padding: 36px 30px;
-  border: 1px solid #E2E8F0;
-  border-radius: 20px;
-  box-shadow: 0 4px 20px rgba(16, 24, 63, 0.05);
-}
-
-.box-header {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 28px;
-  padding-bottom: 16px;
-  border-bottom: 1px solid #E2E8F0;
-}
-
-.header-icon {
-  font-size: 1.8rem;
-}
-
-.box-title {
-  font-family: var(--font-cinematic);
-  font-size: 1.4rem;
-  font-weight: 800;
-  color: #10183F;
-}
-
-/* Rules List */
-.rules-list {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.rule-card {
-  background: #F8FAFC;
-  border: 1px solid #E2E8F0;
-  border-radius: 14px;
-  padding: 16px 20px;
-  transition: all 0.25s ease;
-}
-
-.rule-card:hover {
-  border-color: #CBD5E1;
-  background: #FFFFFF;
-  transform: translateX(4px);
-  box-shadow: 0 4px 14px rgba(16, 24, 63, 0.06);
-}
-
-.rule-badge {
-  font-size: 0.75rem;
-  font-weight: 800;
-  text-transform: uppercase;
-  margin-bottom: 4px;
-  display: inline-block;
-  padding: 2px 8px;
-  border-radius: 6px;
-  background: #EFF6FF;
-  border: 1px solid #BFDBFE;
-  color: #2563EB;
-}
-
-.badge-blue {
-  background: #EFF6FF;
-  border: 1px solid #BFDBFE;
-  color: #2563EB;
-}
-
-.badge-orange {
-  background: #EFF6FF;
-  border: 1px solid #BFDBFE;
-  color: #2563EB;
-}
-
-.badge-green {
-  background: #EFF6FF;
-  border: 1px solid #BFDBFE;
-  color: #2563EB;
-}
-
-.rule-card h4 {
   font-family: var(--font-display);
-  font-size: 1.05rem;
-  font-weight: 700;
-  color: #10183F;
-  margin-bottom: 4px;
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: var(--brand-navy);
+  line-height: 1.2;
+  margin-bottom: 20px;
 }
 
-.rule-card p {
-  font-size: 0.85rem;
-  color: #526078;
-  line-height: 1.5;
+.section-desc-center {
+  font-size: 1.15rem;
+  color: var(--text-muted);
 }
 
-/* Timeline Stepper */
-.timeline-stepper {
+/* Steps Journey */
+.steps-journey {
   display: flex;
-  flex-direction: column;
-  gap: 24px;
-  position: relative;
-  padding-left: 10px;
-}
-
-.timeline-step {
-  display: flex;
-  gap: 20px;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 140px;
   position: relative;
 }
 
-.timeline-step:not(:last-child)::before {
-  content: '';
-  position: absolute;
-  top: 36px;
-  left: 17px;
-  bottom: -24px;
-  width: 2px;
-  background: #CBD5E1;
-}
-
-.step-indicator {
+.step-card {
+  flex: 1;
+  text-align: center;
   position: relative;
-  flex-shrink: 0;
+  z-index: 2;
+  padding: 0 20px;
 }
 
-.step-dot {
-  width: 36px;
-  height: 36px;
+.step-num {
+  width: 80px;
+  height: 80px;
+  background: #FFFFFF;
+  border: 2px solid rgba(37, 99, 235, 0.25);
   border-radius: 50%;
-  background: #F8FAFC;
-  border: 2px solid #CBD5E1;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 0 auto 24px;
   font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: var(--brand-blue);
+  box-shadow: 0 10px 30px rgba(37, 99, 235, 0.12);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.step-card:hover .step-num {
+  border-color: var(--brand-blue);
+  background: linear-gradient(135deg, var(--brand-blue) 0%, #60A5FA 100%);
+  color: #FFFFFF;
+  transform: scale(1.1) translateY(-5px);
+  box-shadow: 0 15px 40px rgba(37, 99, 235, 0.3);
+}
+
+.step-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
   font-weight: 800;
-  font-size: 0.9rem;
-  color: #10183F;
+  color: var(--brand-navy);
+  margin-bottom: 12px;
 }
 
-.step-dot.active {
-  background: #2563EB;
-  border-color: #2563EB;
-  color: #FFFFFF;
+.step-card p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
 }
 
-.step-dot.highlight {
-  background: #10183F;
-  border-color: #10183F;
-  color: #FFFFFF;
+.step-connector {
+  flex: 0.5;
+  height: 2px;
+  background: var(--border-subtle);
+  margin-top: 40px;
+  position: relative;
 }
 
-.step-dot.dot-blue {
-  background: #2563EB;
-  border-color: #2563EB;
-  color: #FFFFFF;
-}
-
-.step-dot.finale-dot {
-  background: #10183F;
-  border-color: #10183F;
-  color: #FFFFFF;
-}
-
-.pulse-ring {
+.step-connector::after {
+  content: '';
   position: absolute;
-  top: -4px;
-  left: -4px;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  border: 2px solid rgba(37, 99, 235, 0.4);
-  animation: pulse-glow 2s infinite;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0%;
+  background: var(--brand-coral);
+  transition: width 1s ease;
 }
 
-.step-content {
+.how-it-works:hover .step-connector::after {
+  width: 100%;
+}
+
+/* Timeline */
+.timeline-container {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.timeline-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 120px;
+  width: 2px;
+  background: var(--border-subtle);
+}
+
+.timeline-item {
   display: flex;
-  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 40px;
+  position: relative;
+  transition: transform 0.4s ease;
+  animation: fadeRight 0.6s ease-out backwards;
 }
 
-.step-date {
-  font-size: 0.75rem;
-  font-weight: 800;
-  letter-spacing: 1px;
-  color: #526078;
-  margin-bottom: 4px;
-  text-transform: uppercase;
+.timeline-item:nth-child(1) { animation-delay: 0.1s; }
+.timeline-item:nth-child(2) { animation-delay: 0.2s; }
+.timeline-item:nth-child(3) { animation-delay: 0.3s; }
+.timeline-item:nth-child(4) { animation-delay: 0.4s; }
+
+@keyframes fadeRight {
+  from { opacity: 0; transform: translateX(-30px); }
+  to { opacity: 1; transform: translateX(0); }
 }
 
-.active-date {
-  color: #2563EB;
-  font-weight: 800;
+.timeline-item:hover {
+  transform: translateX(10px);
 }
 
-.deadline-date {
-  color: #10183F;
-  font-weight: 800;
+.timeline-item:last-child {
+  margin-bottom: 0;
 }
 
-.finale-date {
-  color: #2563EB;
-  font-weight: 800;
-}
-
-.step-title {
+.t-date {
+  width: 100px;
+  text-align: right;
+  padding-right: 40px;
   font-family: var(--font-display);
-  font-size: 1.05rem;
-  font-weight: 700;
-  color: #10183F;
-  margin-bottom: 4px;
+  font-weight: 800;
+  color: var(--brand-blue);
+  font-size: 1.15rem;
+  padding-top: 4px;
 }
 
-.step-desc {
-  font-size: 0.85rem;
-  color: #526078;
-  line-height: 1.5;
+.t-content {
+  flex: 1;
+  padding-left: 40px;
+  position: relative;
 }
 
-@media (max-width: 992px) {
-  .rules-timeline-grid {
-    grid-template-columns: 1fr;
+.t-content::before {
+  content: '';
+  position: absolute;
+  left: -27px;
+  top: 8px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  border: 3px solid var(--brand-navy);
+  box-shadow: 0 0 0 4px rgba(255,255,255,1);
+  transition: all 0.4s ease;
+}
+
+.timeline-item:hover .t-content::before {
+  border-color: var(--brand-blue);
+  background: var(--brand-blue);
+  box-shadow: 0 0 0 6px rgba(37, 99, 235, 0.25);
+  transform: scale(1.3);
+}
+
+.timeline-item.highlight .t-content::before {
+  border-color: var(--brand-blue);
+  background: var(--brand-blue);
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.2);
+}
+
+.t-content h4 {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--brand-navy);
+  margin-bottom: 8px;
+  transition: color 0.3s ease;
+}
+
+.timeline-item:hover .t-content h4 {
+  color: var(--brand-blue);
+}
+
+.t-content p {
+  color: var(--text-muted);
+}
+
+@media (max-width: 768px) {
+  .steps-journey {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .step-connector {
+    display: none;
+  }
+  .timeline-container::before {
+    left: 20px;
+  }
+  .t-date {
+    width: 60px;
+    padding-right: 15px;
+    font-size: 0.9rem;
+    text-align: left;
+  }
+  .t-content {
+    padding-left: 30px;
+  }
+  .t-content::before {
+    left: -47px;
   }
 }
 </style>

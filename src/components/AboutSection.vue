@@ -1,221 +1,356 @@
 <template>
-  <section id="about" class="about-section">
+  <section class="about-section">
+    <!-- WHAT IS WE THE LEADERS? -->
     <div class="container-custom">
-      <div class="section-header text-center">
-        <span class="section-badge">ABOUT THE MOVEMENT</span>
-        <h2 class="section-title">
-          Empowering Creators, <span class="text-gradient-hero">Igniting Change</span>
-        </h2>
-        <p class="section-subtitle">
-          Turning 3-minute stories into a catalyst for statewide social impact.
-        </p>
+      <div class="editorial-layout">
+        <div class="editorial-text">
+          <span class="section-badge">WHAT IS WE THE LEADERS?</span>
+          <h2 class="section-title">Empowering the Next Generation of Changemakers</h2>
+          <p class="section-desc">
+            We The Leaders is not just a competition—it's a movement. We provide a platform for passionate young individuals to step up, take action, and drive meaningful social change in their communities. 
+          </p>
+          <p class="section-desc">
+            Through creative storytelling and grassroots action, we aim to amplify the voices of youth who are dedicated to solving real-world challenges, from environmental sustainability to education and social equality.
+          </p>
+          <router-link to="/about" class="link-arrow">
+            Discover Our Story <span class="arrow">→</span>
+          </router-link>
+        </div>
+        <div class="editorial-image">
+          <div class="image-wrapper">
+            <img src="/community.jpg" alt="Young volunteers" class="organic-img" />
+            <div class="floating-stat-box">
+              <span class="stat-num">50k+</span>
+              <span class="stat-lbl">Lives Impacted</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- WHY SOCIAL IMPACT MATTERS -->
+    <div class="impact-matters-wrap">
+      <div class="container-custom">
+        <div class="impact-header">
+          <h2 class="section-title text-white">Why Social Impact Matters</h2>
+          <p class="impact-subtitle text-white">Individual actions, when united, have the power to transform entire communities and create lasting systemic change.</p>
+        </div>
+        
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-val">100+</div>
+            <div class="stat-name">Social Initiatives</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-val">10k+</div>
+            <div class="stat-name">Young Changemakers</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-val">38</div>
+            <div class="stat-name">Communities Reached</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-val">High</div>
+            <div class="stat-name">Community Impact</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- WHO CAN PARTICIPATE? -->
+    <div class="container-custom participate-section">
+      <div class="section-header-center">
+        <span class="section-badge">ELIGIBILITY</span>
+        <h2 class="section-title">Who Can Participate?</h2>
+        <p class="section-desc-center">Whether you're an artist, an engineer, a student, or an activist, if you have the drive to make a difference, there is a place for you here.</p>
       </div>
 
-      <div class="about-grid">
-        <!-- Main Quote Box -->
-        <div class="about-main-card">
-          <div class="quote-decor">“</div>
-          <div class="about-content">
-            <h3 class="about-lead">
-              <strong>We The Leaders</strong> is a youth-centric movement dedicated to channeling the energy, passion, and creative vision of young minds into constructive social progress.
-            </h3>
-            <p class="about-body">
-              <strong>Reels for Real Change</strong> provides a high-impact platform for Tamil Nadu’s creators to turn short-form video storytelling into a force for inspiration, awareness, and positive transformation. Whether you are an aspiring filmmaker, digital creator, actor, or story enthusiast, this is your arena to captivate hearts and make your voice count.
-            </p>
-          </div>
-          
-          <div class="creator-support-strip">
-            <div class="support-item">
-              <span class="support-icon icon-orange">💡</span>
-              <div>
-                <strong>Inspire Action</strong>
-                <p>Highlight solutions to everyday community issues</p>
-              </div>
-            </div>
-            <div class="support-item">
-              <span class="support-icon icon-blue">🌟</span>
-              <div>
-                <strong>Gain Recognition</strong>
-                <p>Direct exposure to top film directors & media producers</p>
-              </div>
-            </div>
-            <div class="support-item">
-              <span class="support-icon icon-green">🤝</span>
-              <div>
-                <strong>Lead The Shift</strong>
-                <p>Join a state-wide network of proactive young changemakers</p>
-              </div>
-            </div>
-          </div>
+      <div class="eligibility-grid">
+        <div class="eligibility-card">
+          <div class="e-icon">🎓</div>
+          <h3>Students & Scholars</h3>
+          <p>College and university students looking to apply their academic knowledge to real-world social challenges.</p>
+        </div>
+        <div class="eligibility-card">
+          <div class="e-icon">🎨</div>
+          <h3>Creators & Artists</h3>
+          <p>Filmmakers, writers, and artists who use their voice and creativity to raise awareness and inspire action.</p>
+        </div>
+        <div class="eligibility-card">
+          <div class="e-icon">🤝</div>
+          <h3>Community Volunteers</h3>
+          <p>Individuals already working on grassroots initiatives who want to amplify their impact and reach.</p>
         </div>
       </div>
     </div>
   </section>
 </template>
 
-<script setup>
-</script>
-
 <style scoped>
 .about-section {
-  padding: 90px 0;
-  position: relative;
-  background-color: #FFFFFF;
-}
-
-.text-center {
-  text-align: center;
-}
-
-.section-header {
-  max-width: 720px;
-  margin: 0 auto 50px;
+  padding-top: 100px;
+  background-color: var(--bg-primary);
 }
 
 .section-badge {
   display: inline-block;
   font-family: var(--font-display);
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   font-weight: 800;
   letter-spacing: 2px;
-  color: #2563EB;
+  color: var(--brand-coral);
+  margin-bottom: 16px;
   text-transform: uppercase;
-  margin-bottom: 12px;
-  background: #EFF6FF;
-  padding: 5px 16px;
-  border-radius: 9999px;
-  border: 1px solid #BFDBFE;
 }
 
 .section-title {
-  font-family: var(--font-cinematic);
-  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  font-family: var(--font-display);
+  font-size: 2.8rem;
   font-weight: 800;
-  color: #10183F;
+  color: var(--text-heading);
   line-height: 1.2;
-  margin-bottom: 12px;
+  margin-bottom: 24px;
 }
 
-.section-subtitle {
-  color: #526078;
-  font-size: 1.1rem;
+.section-desc {
+  font-size: 1.15rem;
+  color: var(--text-muted);
+  margin-bottom: 20px;
+  max-width: 540px;
 }
 
-.about-main-card {
+.text-white {
+  color: #FFFFFF;
+}
+
+/* Editorial Layout */
+.editorial-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+  margin-bottom: 120px;
+}
+
+.link-arrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--brand-navy);
+  text-decoration: none;
+  margin-top: 16px;
+  transition: color 0.3s ease;
+}
+
+.link-arrow:hover {
+  color: var(--brand-coral);
+}
+
+.link-arrow .arrow {
+  transition: transform 0.3s ease;
+}
+
+.link-arrow:hover .arrow {
+  transform: translateX(6px);
+}
+
+.editorial-image {
   position: relative;
-  padding: 48px;
-  border: 1px solid #E2E8F0;
-  background: #F8FAFC;
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: 0 4px 20px rgba(16, 24, 63, 0.04);
 }
 
-.quote-decor {
+.image-wrapper {
+  position: relative;
+  border-radius: 40px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(11, 27, 61, 0.1);
+}
+
+.organic-img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 40px 10px 40px 10px;
+  display: block;
+}
+
+.floating-stat-box {
   position: absolute;
-  top: 10px;
-  right: 30px;
-  font-family: var(--font-cinematic);
-  font-size: 10rem;
-  line-height: 1;
-  color: rgba(16, 24, 63, 0.04);
-  user-select: none;
+  bottom: -20px;
+  left: -20px;
+  background: var(--bg-card);
+  padding: 24px 32px;
+  border-radius: 24px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-num {
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: var(--brand-coral);
+}
+
+.stat-lbl {
+  font-weight: 700;
+  color: var(--text-muted);
+}
+
+/* Impact Section */
+.impact-matters-wrap {
+  background: var(--brand-navy);
+  padding: 100px 0;
+  border-radius: 40px;
+  margin: 0 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.impact-header {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 60px;
+}
+
+.impact-subtitle {
+  font-size: 1.15rem;
+  opacity: 0.85;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.stat-card {
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.01) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-top-color: rgba(255, 255, 255, 0.35);
+  border-left-color: rgba(255, 255, 255, 0.35);
+  border-radius: 28px;
+  padding: 40px 24px;
+  text-align: center;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.stat-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at center, rgba(255, 107, 107, 0.15) 0%, transparent 60%);
+  opacity: 0;
+  transition: opacity 0.5s ease;
   pointer-events: none;
 }
 
-.about-content {
-  position: relative;
-  z-index: 2;
-  margin-bottom: 40px;
+.stat-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+  border-color: rgba(255, 107, 107, 0.4);
 }
 
-.about-lead {
-  font-family: var(--font-display);
-  font-size: clamp(1.2rem, 2vw, 1.45rem);
-  font-weight: 500;
-  line-height: 1.65;
-  color: #10183F;
-  margin-bottom: 18px;
+.stat-card:hover::before {
+  opacity: 1;
 }
 
-.about-lead strong {
-  color: #2563EB;
-  font-weight: 700;
+.stat-val {
+  font-family: var(--font-display, 'Inter', sans-serif);
+  font-size: 3.8rem;
+  font-weight: 900;
+  background: linear-gradient(135deg, #FFFFFF 0%, #94A3B8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 12px;
+  line-height: 1.1;
 }
 
-.about-body {
-  font-size: 1.05rem;
-  color: #526078;
-  line-height: 1.8;
+.stat-name {
+  font-weight: 800;
+  color: #FF6B6B;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.85rem;
 }
 
-.about-body strong {
-  color: #2563EB;
+/* Participate Section */
+.participate-section {
+  padding: 120px 0;
 }
 
-.creator-support-strip {
-  position: relative;
-  z-index: 2;
+.section-header-center {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 60px;
+}
+
+.section-desc-center {
+  font-size: 1.15rem;
+  color: var(--text-muted);
+}
+
+.eligibility-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-  padding-top: 32px;
-  border-top: 1px solid #E2E8F0;
+  gap: 32px;
 }
 
-.support-item {
-  display: flex;
-  gap: 14px;
-  align-items: flex-start;
-  background: #FFFFFF;
-  padding: 16px;
-  border-radius: 14px;
-  border: 1px solid #E2E8F0;
+.eligibility-card {
+  background: var(--bg-card);
+  padding: 40px;
+  border-radius: 32px;
+  box-shadow: 0 10px 40px rgba(11, 27, 61, 0.04);
+  border: 1px solid var(--border-subtle);
+  transition: all 0.4s ease;
 }
 
-.support-icon {
-  font-size: 1.6rem;
-  padding: 8px;
-  border-radius: 10px;
-  flex-shrink: 0;
+.eligibility-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 50px rgba(11, 27, 61, 0.08);
+  border-color: var(--brand-coral);
 }
 
-.icon-orange {
-  background: #EFF6FF;
-  border: 1px solid #BFDBFE;
+.e-icon {
+  font-size: 3rem;
+  margin-bottom: 24px;
 }
 
-.icon-blue {
-  background: #EFF6FF;
-  border: 1px solid #BFDBFE;
-}
-
-.icon-green {
-  background: #EFF6FF;
-  border: 1px solid #BFDBFE;
-}
-
-.support-item strong {
-  display: block;
+.eligibility-card h3 {
   font-family: var(--font-display);
-  font-size: 1rem;
-  color: #10183F;
-  margin-bottom: 4px;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--brand-navy);
+  margin-bottom: 16px;
 }
 
-.support-item p {
-  font-size: 0.85rem;
-  color: #526078;
-  line-height: 1.45;
+.eligibility-card p {
+  color: var(--text-muted);
+  line-height: 1.6;
 }
 
-@media (max-width: 860px) {
-  .about-main-card {
-    padding: 30px 20px;
-  }
-  .creator-support-strip {
+@media (max-width: 992px) {
+  .editorial-layout {
     grid-template-columns: 1fr;
-    gap: 16px;
+    gap: 50px;
+  }
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .eligibility-grid {
+    grid-template-columns: 1fr;
+  }
+  .section-title {
+    font-size: 2.2rem;
   }
 }
 </style>

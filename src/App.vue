@@ -5,7 +5,11 @@
 
     <!-- Active Routed Page -->
     <main>
-      <router-view @submitted="handleSubmissionSuccess" />
+      <router-view v-slot="{ Component }">
+        <transition name="page-transition" mode="out-in">
+          <component :is="Component" @submitted="handleSubmissionSuccess" />
+        </transition>
+      </router-view>
     </main>
 
     <!-- Site Footer -->
@@ -54,5 +58,21 @@ provide('onSubmissionSuccess', handleSubmissionSuccess)
 
 main {
   flex-grow: 1;
+}
+
+/* Global Page Transition Animations */
+.page-transition-enter-active,
+.page-transition-leave-active {
+  transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1), transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.page-transition-enter-from {
+  opacity: 0;
+  transform: translateY(15px);
+}
+
+.page-transition-leave-to {
+  opacity: 0;
+  transform: translateY(-15px);
 }
 </style>

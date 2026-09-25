@@ -1,272 +1,100 @@
 <template>
-  <div class="content-guide-page">
-    <!-- Page Hero Banner -->
-    <PageBanner
-      currentPage="Content Guide"
-      badge="CREATOR MASTERCLASS & TOOLKIT"
-      badgeIcon="🎬"
-      subtitle="The ultimate guide to ideating, scripting, filming, and editing high-impact 3-minute reels for Reels For Real Change."
-    >
-      <template #title>
-        Reel Content & <span class="text-gradient-hero">Creator Guide</span>
-      </template>
-
-      <template #actions>
-        <button class="btn-primary" @click="openRegisterModal">
-          <span>Submit Your Reel</span>
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-        </button>
-        <router-link to="/themes" class="btn-secondary">
-          <span>Browse 6 Themes</span>
-        </router-link>
-      </template>
-    </PageBanner>
-
-    <div class="page-content-wrap">
-      <!-- Section 1: 4 Storytelling Formats -->
-      <section class="formats-section">
-        <div class="container-custom">
-          <div class="section-header text-center">
-            <span class="section-badge">NARRATIVE BLUEPRINTS</span>
-            <h2 class="section-title">4 Proven Formats for 3-Minute Reels</h2>
-            <p class="section-subtitle">Pick the cinematic style that best matches your crew, equipment, and story goal.</p>
+  <div class="page-container">
+    <div class="page-header">
+      <div class="container-custom">
+        <h1 class="page-title">Content & Creator Guide</h1>
+        <p class="page-subtitle">How to tell your impact story effectively.</p>
+      </div>
+    </div>
+    
+    <div class="container-custom page-content">
+      <!-- Storytelling Guidelines -->
+      <section class="guide-section">
+        <div class="section-title-wrap">
+          <span class="badge">STORYTELLING</span>
+          <h2>Crafting Your Message</h2>
+        </div>
+        <div class="guide-grid">
+          <div class="guide-card">
+            <div class="g-icon">❤️</div>
+            <h3>Be Authentic</h3>
+            <p>Show real emotions, real people, and real struggles. Don't stage or script interactions unnaturally.</p>
           </div>
+          <div class="guide-card">
+            <div class="g-icon">🎯</div>
+            <h3>Focus on Action</h3>
+            <p>Don't just talk about the problem. Show us the steps you are taking to solve it.</p>
+          </div>
+          <div class="guide-card">
+            <div class="g-icon">🎙️</div>
+            <h3>Elevate Voices</h3>
+            <p>Let the community members speak for themselves instead of speaking for them.</p>
+          </div>
+        </div>
+      </section>
 
-          <div class="formats-grid">
-            <!-- Format 1 -->
-            <div class="format-card card-glow">
-              <div class="format-header">
-                <span class="format-icon">🎙️</span>
-                <span class="format-tag">DOCUMENTARY / STREET</span>
-              </div>
-              <h3 class="format-title">The Real-Voice Voxpop</h3>
-              <p class="format-desc">
-                Step onto the streets, college campuses, or local markets. Interview real citizens about everyday civic issues, capture candid reactions, and conclude with an inspiring youth action.
-              </p>
-              <div class="format-highlights">
-                <div class="fh-item"><strong>Best for:</strong> Civic pride, hygiene, local heroes</div>
-                <div class="fh-item"><strong>Pacing:</strong> Quick rapid-fire cuts + punchy voiceover</div>
-              </div>
+      <!-- Content Format -->
+      <section class="guide-section bg-light-wrap">
+        <div class="section-title-wrap">
+          <span class="badge">FORMAT</span>
+          <h2>Technical Requirements</h2>
+        </div>
+        <div class="format-grid">
+          <div class="format-card">
+            <div class="f-icon">⏱️</div>
+            <div class="f-info">
+              <strong>Length</strong>
+              <p>1 to 3 minutes maximum.</p>
             </div>
-
-            <!-- Format 2 -->
-            <div class="format-card card-glow">
-              <div class="format-header">
-                <span class="format-icon">🎭</span>
-                <span class="format-tag">NARRATIVE FICTION</span>
-              </div>
-              <h3 class="format-title">The Micro-Drama Sketch</h3>
-              <p class="format-desc">
-                A scripted story featuring 2-3 actors. Follow a relatable character facing a tough social dilemma (e.g. cyberbullying, academic stress, helping a neighbor) and finding their leadership moment.
-              </p>
-              <div class="format-highlights">
-                <div class="fh-item"><strong>Best for:</strong> Youth leadership, digital wellness, equality</div>
-                <div class="fh-item"><strong>Pacing:</strong> Emotional build-up + powerful climax</div>
-              </div>
+          </div>
+          <div class="format-card">
+            <div class="f-icon">📱</div>
+            <div class="f-info">
+              <strong>Orientation</strong>
+              <p>Vertical (9:16) optimized for mobile viewing.</p>
             </div>
-
-            <!-- Format 3 -->
-            <div class="format-card card-glow">
-              <div class="format-header">
-                <span class="format-icon">⚡</span>
-                <span class="format-tag">CINEMATIC MONTAGE</span>
-              </div>
-              <h3 class="format-title">Visual Poetry & Culture</h3>
-              <p class="format-desc">
-                Fast-paced, aesthetic visual montage blending traditional art (Silambam, Therukoothu, folk dance) or raw urban shots with a gripping, poetic Tamil voiceover narration.
-              </p>
-              <div class="format-highlights">
-                <div class="fh-item"><strong>Best for:</strong> Heritage, environmental care, empowerment</div>
-                <div class="fh-item"><strong>Pacing:</strong> Rhythmic beats + stunning transition cuts</div>
-              </div>
+          </div>
+          <div class="format-card">
+            <div class="f-icon">🎬</div>
+            <div class="f-info">
+              <strong>Resolution</strong>
+              <p>1080p minimum. Clear audio is crucial.</p>
             </div>
-
-            <!-- Format 4 -->
-            <div class="format-card card-glow">
-              <div class="format-header">
-                <span class="format-icon">💡</span>
-                <span class="format-tag">CREATIVE SATIRE</span>
-              </div>
-              <h3 class="format-title">Satire & Constructive Wit</h3>
-              <p class="format-desc">
-                Using clever sarcasm and everyday humor to mirror human habits (e.g., throwing trash beside a dustbin, forwarding fake news) before turning the mirror into an eye-opening solution.
-              </p>
-              <div class="format-highlights">
-                <div class="fh-item"><strong>Best for:</strong> Road safety, civic hygiene, social awareness</div>
-                <div class="fh-item"><strong>Pacing:</strong> Punchy comedic timing + thoughtful twist</div>
-              </div>
+          </div>
+          <div class="format-card">
+            <div class="f-icon">🌍</div>
+            <div class="f-info">
+              <strong>Language</strong>
+              <p>Local languages are encouraged. English subtitles required.</p>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Section 2: Instagram Safe Zone & Framing Guide -->
-      <section class="safe-zone-section">
-        <div class="container-custom">
-          <div class="safe-zone-box glass-panel">
-            <div class="safe-zone-grid">
-              <div class="safe-zone-info">
-                <span class="section-badge">VISUAL MASTERCLASS</span>
-                <h2 class="safe-title">Instagram 9:16 Safe Zones & Framing</h2>
-                <p class="safe-desc">
-                  Instagram displays icons (like, comment, share, caption, audio pill) directly on top of your reel. Follow these framing rules so your crucial subtitles and actor faces remain 100% visible:
-                </p>
-
-                <div class="safe-rules-list">
-                  <div class="safe-rule-item">
-                    <span class="safe-dot dot-blue"></span>
-                    <div>
-                      <strong>Keep Subtitles Centered (Lower-Middle):</strong>
-                      <p>Position subtitles at 20% to 35% from the bottom to prevent them from being hidden behind the account username and caption text.</p>
-                    </div>
-                  </div>
-
-                  <div class="safe-rule-item">
-                    <span class="safe-dot dot-blue"></span>
-                    <div>
-                      <strong>Right Edge Margin (15% Clear Zone):</strong>
-                      <p>Avoid placing essential graphics or text on the extreme right side where like, comment, and share buttons appear.</p>
-                    </div>
-                  </div>
-
-                  <div class="safe-rule-item">
-                    <span class="safe-dot dot-blue"></span>
-                    <div>
-                      <strong>Top Header Safe Area (10% Margin):</strong>
-                      <p>Keep key visual subjects below the top 10% line where the Instagram camera/search bars sit.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Visual Safe Zone Preview Mockup -->
-              <div class="safe-zone-visual-card">
-                <div class="mockup-frame">
-                  <div class="mockup-top-bar">
-                    <span>Reels Safe Zone</span>
-                    <span class="mockup-res">1080 × 1920 px</span>
-                  </div>
-                  <div class="mockup-body">
-                    <div class="zone-danger top-danger">Top 10% Header Space</div>
-                    <div class="zone-safe">
-                      <div class="safe-content-box">
-                        <span class="safe-badge-pill">✅ PRIMARY SAFE ZONE</span>
-                        <p class="safe-instruction">Keep Face, Core Subject & Action Inside this Box</p>
-                        <div class="subtitle-safe-box">
-                          <span>📝 Subtitle Safe Zone (Centered)</span>
-                        </div>
-                      </div>
-                      <div class="zone-right-danger">Icons (Like/Share)</div>
-                    </div>
-                    <div class="zone-danger bottom-danger">Bottom 20% Caption & Audio Space</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+      <!-- Do's and Don'ts -->
+      <section class="guide-section">
+        <div class="section-title-wrap">
+          <span class="badge">GUIDELINES</span>
+          <h2>Do's & Don'ts</h2>
         </div>
-      </section>
-
-      <!-- Section 3: Recommended Free Toolkit -->
-      <section class="toolkit-section">
-        <div class="container-custom">
-          <div class="section-header text-center">
-            <span class="section-badge">CREATOR RESOURCES</span>
-            <h2 class="section-title">Recommended Free Creator Toolkit</h2>
-            <p class="section-subtitle">You don't need expensive gear. These powerful free mobile & desktop apps get the job done.</p>
+        <div class="dos-donts-grid">
+          <div class="dos-card">
+            <h3>✅ DO</h3>
+            <ul>
+              <li>Focus on the impact and the people.</li>
+              <li>Use natural lighting and authentic settings.</li>
+              <li>Keep the message clear and concise.</li>
+              <li>Include a call-to-action for the viewer.</li>
+            </ul>
           </div>
-
-          <div class="toolkit-grid">
-            <div class="tool-card card-glow">
-              <div class="tool-icon">✂️</div>
-              <h3 class="tool-name">VN Video Editor / CapCut</h3>
-              <span class="tool-type">Mobile & Desktop Video Editing</span>
-              <p class="tool-desc">
-                Powerful multitrack timeline, keyframing, dynamic speed ramping, auto Tamil/English captions, and zero watermark export.
-              </p>
-            </div>
-
-            <div class="tool-card card-glow">
-              <div class="tool-icon">🎙️</div>
-              <h3 class="tool-name">Adobe Podcast AI (Enhance)</h3>
-              <span class="tool-type">Free Audio Cleaner</span>
-              <p class="tool-desc">
-                Removes wind noise, street echo, and background rumble with one click, giving your phone microphone studio-level voiceover quality.
-              </p>
-            </div>
-
-            <div class="tool-card card-glow">
-              <div class="tool-icon">🎨</div>
-              <h3 class="tool-name">DaVinci Resolve / Canva</h3>
-              <span class="tool-type">Color Grading & Title Graphics</span>
-              <p class="tool-desc">
-                Industry-standard color correction tools and eye-catching animated lower-third graphics to make your visuals pop.
-              </p>
-            </div>
-
-            <div class="tool-card card-glow">
-              <div class="tool-icon">🎵</div>
-              <h3 class="tool-name">YouTube Audio Library / Freesound</h3>
-              <span class="tool-type">Royalty-Free BGM & SFX</span>
-              <p class="tool-desc">
-                Copyright-safe background scores, whooshes, cinematic risers, and sound effects to elevate your reel's pacing.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Section 4: Instagram Caption & Hashtag Playbook -->
-      <section class="hashtag-section">
-        <div class="container-custom">
-          <div class="hashtag-box glass-panel">
-            <div class="hashtag-header">
-              <span class="section-badge">VIRAL COLLAB STRATEGY</span>
-              <h2 class="hashtag-title">Official Hashtags & Caption Guide</h2>
-              <p class="hashtag-sub">
-                Copy and paste these official competition tags into your Instagram reel caption for smooth tracking and evaluation:
-              </p>
-            </div>
-
-            <div class="tags-copy-card">
-              <div class="tags-text-block">
-                <code>
-                  #WeTheLeaders #ReelsForRealChange #WTL2026 #TamilNaduCreators #YouthLeadership #PondicherryYouth #TamilShortFilm #SocialImpact
-                </code>
-              </div>
-              <button class="btn-secondary btn-copy" @click="copyTags">
-                <span>{{ copied ? '✓ Copied to Clipboard!' : '📋 Copy Hashtag Pack' }}</span>
-              </button>
-            </div>
-
-            <div class="collab-reminder-strip">
-              <span class="collab-bell">🔔</span>
-              <span><strong>Mandatory:</strong> Send Collaboration Invite to <strong>@wtl_leadingthechange</strong> when posting your reel on Instagram!</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Section 5: Content Inquiry & Creator Support Form -->
-      <ContentInquiryForm />
-
-      <!-- Section 6: Bottom CTA -->
-      <section class="page-cta-strip">
-        <div class="container-custom">
-          <div class="cta-banner-box">
-            <div class="cta-banner-content">
-              <h2 class="cta-title">Got Your Story Ready?</h2>
-              <p class="cta-sub">Shoot your reel, post it on Instagram with collab invite, and submit your link here!</p>
-            </div>
-            <div class="cta-banner-btns">
-              <button class="btn-primary btn-lg" @click="openRegisterModal">
-                <span>Submit Your Reel</span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-              </button>
-              <router-link to="/prizes" class="btn-secondary">
-                <span>View ₹90,000+ Prize Pool</span>
-              </router-link>
-            </div>
+          <div class="donts-card">
+            <h3>❌ DON'T</h3>
+            <ul>
+              <li>Use copyrighted music without permission.</li>
+              <li>Create overly corporate or promotional content.</li>
+              <li>Exploit vulnerable individuals for views.</li>
+              <li>Use excessive filters or artificial effects.</li>
+            </ul>
           </div>
         </div>
       </section>
@@ -274,520 +102,236 @@
   </div>
 </template>
 
-<script setup>
-import { ref } from 'vue'
-import PageBanner from '../components/PageBanner.vue'
-import ContentInquiryForm from '../components/ContentInquiryForm.vue'
-import { useRegisterModal } from '../composables/useRegisterModal'
-
-const { openRegisterModal } = useRegisterModal()
-const copied = ref(false)
-
-const copyTags = () => {
-  const tags = '#WeTheLeaders #ReelsForRealChange #WTL2026 #TamilNaduCreators #YouthLeadership #PondicherryYouth #TamilShortFilm #SocialImpact'
-  navigator.clipboard.writeText(tags).then(() => {
-    copied.value = true
-    setTimeout(() => {
-      copied.value = false
-    }, 3000)
-  })
-}
-</script>
-
 <style scoped>
-.text-center {
+.page-container {
+  padding-bottom: 120px;
+}
+
+.page-header {
+  background: linear-gradient(rgba(11, 27, 61, 0.6), rgba(11, 27, 61, 0.75)), url('/community.jpg') center 90%/cover no-repeat;
+  padding: 500px 0 200px;
   text-align: center;
+  color: #FFFFFF;
 }
 
-.section-header {
-  max-width: 720px;
-  margin: 0 auto 50px;
+.page-title {
+  font-family: var(--font-display);
+  font-size: 3.5rem;
+  font-weight: 900;
+  margin-bottom: 16px;
 }
 
-.section-badge {
+.page-subtitle {
+  font-size: 1.25rem;
+  color: var(--brand-coral);
+  font-weight: 600;
+}
+
+.page-content {
+  margin-top: 60px;
+}
+
+.guide-section {
+  margin-bottom: 80px;
+}
+
+.section-title-wrap {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.badge {
   display: inline-block;
   font-family: var(--font-display);
-  font-size: 0.8rem;
   font-weight: 800;
+  color: var(--brand-blue);
   letter-spacing: 2px;
-  color: #2563EB;
+  margin-bottom: 12px;
   text-transform: uppercase;
-  margin-bottom: 12px;
-  background: #EFF6FF;
-  padding: 5px 16px;
-  border-radius: 9999px;
-  border: 1px solid #BFDBFE;
 }
 
-.section-title {
-  font-family: var(--font-cinematic);
-  font-size: clamp(2rem, 3.5vw, 2.8rem);
-  font-weight: 800;
-  color: #10183F;
-  line-height: 1.2;
-  margin-bottom: 12px;
+.section-title-wrap h2 {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  color: var(--brand-navy);
 }
 
-.section-subtitle {
-  color: #526078;
-  font-size: 1.1rem;
+.guide-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
 }
 
-/* Formats Grid */
-.formats-section {
-  padding: 80px 0;
-  background-color: #FFFFFF;
+.guide-card {
+  background: #FFFFFF;
+  padding: 40px;
+  border-radius: 24px;
+  box-shadow: 0 10px 40px rgba(11, 27, 61, 0.05);
+  border: 1px solid var(--border-subtle);
+  text-align: center;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
 }
 
-.formats-grid {
+.guide-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.05) 0%, rgba(37, 99, 235, 0) 100%);
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.guide-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 50px rgba(37, 99, 235, 0.15);
+  border-color: rgba(37, 99, 235, 0.3);
+}
+
+.guide-card:hover::before {
+  opacity: 1;
+}
+
+.g-icon {
+  font-size: 3.5rem;
+  margin-bottom: 24px;
+  display: inline-block;
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.guide-card:hover .g-icon {
+  transform: scale(1.2) rotate(5deg);
+}
+
+.guide-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  color: var(--brand-navy);
+  margin-bottom: 16px;
+}
+
+.guide-card p {
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.bg-light-wrap {
+  background: var(--bg-secondary);
+  padding: 60px;
+  border-radius: 32px;
+}
+
+.format-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 28px;
+  gap: 24px;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .format-card {
   background: #FFFFFF;
-  border: 1px solid #E2E8F0;
+  padding: 32px;
   border-radius: 20px;
-  padding: 32px 28px;
-  display: flex;
-  flex-direction: column;
-}
-
-.format-header {
+  box-shadow: 0 10px 30px rgba(11, 27, 61, 0.04);
+  border: 1px solid var(--border-subtle);
   display: flex;
   align-items: center;
-  gap: 12px;
-  margin-bottom: 14px;
+  gap: 24px;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.format-icon {
-  font-size: 2rem;
-  background: #EFF6FF;
-  border: 1px solid #BFDBFE;
-  padding: 6px;
-  border-radius: 12px;
+.format-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(37, 99, 235, 0.1);
+  border-color: rgba(37, 99, 235, 0.2);
 }
 
-.format-tag {
-  font-size: 0.75rem;
-  font-weight: 800;
-  letter-spacing: 1px;
-  color: #2563EB;
-  background: #EFF6FF;
-  padding: 4px 10px;
-  border-radius: 6px;
-  border: 1px solid #BFDBFE;
-}
-
-.format-title {
-  font-family: var(--font-cinematic);
-  font-size: 1.35rem;
-  font-weight: 800;
-  color: #10183F;
-  margin-bottom: 10px;
-}
-
-.format-desc {
-  font-size: 0.925rem;
-  color: #526078;
-  line-height: 1.6;
-  margin-bottom: 20px;
-  flex-grow: 1;
-}
-
-.format-highlights {
-  border-top: 1px solid #E2E8F0;
-  padding-top: 14px;
+.f-icon {
+  font-size: 2.5rem;
+  background: var(--bg-secondary);
+  width: 70px;
+  height: 70px;
   display: flex;
-  flex-direction: column;
-  gap: 6px;
-  font-size: 0.85rem;
-  color: #10183F;
-}
-
-.fh-item strong {
-  color: #2563EB;
-}
-
-/* Safe Zone Section */
-.safe-zone-section {
-  padding: 80px 0;
-  background-color: #F8FAFC;
-  border-top: 1px solid #E2E8F0;
-  border-bottom: 1px solid #E2E8F0;
-}
-
-.safe-zone-box {
-  padding: 48px;
-  border-radius: 24px;
-  border: 1px solid #E2E8F0;
-  background: #FFFFFF;
-}
-
-.safe-zone-grid {
-  display: grid;
-  grid-template-columns: 1.25fr 0.95fr;
-  gap: 48px;
-  align-items: center;
-}
-
-.safe-title {
-  font-family: var(--font-cinematic);
-  font-size: clamp(1.8rem, 2.8vw, 2.4rem);
-  font-weight: 800;
-  color: #10183F;
-  margin-bottom: 14px;
-  line-height: 1.2;
-}
-
-.safe-desc {
-  font-size: 1.05rem;
-  color: #526078;
-  line-height: 1.65;
-  margin-bottom: 24px;
-}
-
-.safe-rules-list {
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-}
-
-.safe-rule-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 12px;
-}
-
-.safe-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: #2563EB;
-  margin-top: 8px;
   flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: transform 0.3s ease, background 0.3s ease;
 }
 
-.safe-rule-item strong {
+.format-card:hover .f-icon {
+  transform: scale(1.1) rotate(-10deg);
+  background: rgba(37, 99, 235, 0.08);
+}
+
+.f-info strong {
   display: block;
-  font-size: 0.95rem;
-  color: #10183F;
-  margin-bottom: 2px;
-}
-
-.safe-rule-item p {
-  font-size: 0.85rem;
-  color: #526078;
-  line-height: 1.45;
-}
-
-/* Visual Mockup Frame */
-.safe-zone-visual-card {
-  display: flex;
-  justify-content: center;
-}
-
-.mockup-frame {
-  width: 100%;
-  max-width: 340px;
-  height: 480px;
-  background: #10183F;
-  border: 3px solid #CBD5E1;
-  border-radius: 28px;
-  overflow: hidden;
-  box-shadow: 0 16px 40px rgba(16, 24, 63, 0.15);
-  display: flex;
-  flex-direction: column;
-}
-
-.mockup-top-bar {
-  background: #0B112C;
-  color: #FFFFFF;
-  padding: 10px 16px;
-  font-size: 0.75rem;
-  font-weight: 700;
-  display: flex;
-  justify-content: space-between;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.mockup-res {
-  color: #60A5FA;
-}
-
-.mockup-body {
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  background: #1E293B;
-  color: #FFFFFF;
-}
-
-.zone-danger {
-  background: rgba(239, 68, 68, 0.25);
-  border: 1px dashed #EF4444;
-  color: #FCA5A5;
-  font-size: 0.7rem;
-  font-weight: 700;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 6px;
-}
-
-.top-danger {
-  height: 45px;
-}
-
-.bottom-danger {
-  height: 85px;
-}
-
-.zone-safe {
-  flex-grow: 1;
-  display: flex;
-  position: relative;
-}
-
-.safe-content-box {
-  flex-grow: 1;
-  border: 2px dashed #2563EB;
-  background: rgba(37, 99, 235, 0.12);
-  margin: 8px;
-  border-radius: 12px;
-  padding: 14px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  gap: 8px;
-}
-
-.safe-badge-pill {
-  font-size: 0.7rem;
-  font-weight: 800;
-  color: #FFFFFF;
-  background: #2563EB;
-  padding: 3px 10px;
-  border-radius: 9999px;
-}
-
-.safe-instruction {
-  font-size: 0.75rem;
-  color: #EFF6FF;
-  line-height: 1.35;
-}
-
-.subtitle-safe-box {
-  background: rgba(255, 255, 255, 0.15);
-  border: 1px solid #BFDBFE;
-  padding: 4px 10px;
-  border-radius: 6px;
-  font-size: 0.7rem;
-  color: #FFFFFF;
-  font-weight: 700;
-  margin-top: 8px;
-}
-
-.zone-right-danger {
-  width: 50px;
-  background: rgba(239, 68, 68, 0.25);
-  border-left: 1px dashed #EF4444;
-  color: #FCA5A5;
-  font-size: 0.65rem;
-  font-weight: 700;
-  writing-mode: vertical-rl;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 4px;
-}
-
-/* Toolkit Grid */
-.toolkit-section {
-  padding: 80px 0;
-  background-color: #FFFFFF;
-}
-
-.toolkit-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-}
-
-.tool-card {
-  background: #FFFFFF;
-  border: 1px solid #E2E8F0;
-  border-radius: 18px;
-  padding: 26px 20px;
-  display: flex;
-  flex-direction: column;
-}
-
-.tool-icon {
-  font-size: 2rem;
-  margin-bottom: 12px;
-}
-
-.tool-name {
   font-family: var(--font-display);
-  font-size: 1.1rem;
-  font-weight: 800;
-  color: #10183F;
+  font-size: 1.3rem;
+  color: var(--brand-navy);
   margin-bottom: 4px;
 }
 
-.tool-type {
-  font-size: 0.75rem;
-  font-weight: 800;
-  color: #2563EB;
-  margin-bottom: 12px;
-  text-transform: uppercase;
-}
-
-.tool-desc {
-  font-size: 0.85rem;
-  color: #526078;
+.f-info p {
+  color: var(--text-muted);
+  font-size: 1.05rem;
   line-height: 1.5;
 }
 
-/* Hashtag Section */
-.hashtag-section {
-  padding: 80px 0;
-  background-color: #F8FAFC;
-}
-
-.hashtag-box {
-  background: #FFFFFF;
-  padding: 40px;
-  border-radius: 20px;
-  border: 1px solid #E2E8F0;
-  text-align: center;
-  max-width: 860px;
+.dos-donts-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  max-width: 900px;
   margin: 0 auto;
 }
 
-.hashtag-title {
-  font-family: var(--font-cinematic);
-  font-size: 1.8rem;
-  font-weight: 800;
-  color: #10183F;
-  margin-bottom: 8px;
+.dos-card, .donts-card {
+  padding: 40px;
+  border-radius: 24px;
 }
 
-.hashtag-sub {
-  font-size: 0.95rem;
-  color: #526078;
+.dos-card {
+  background: rgba(46, 125, 50, 0.05);
+  border: 1px solid rgba(46, 125, 50, 0.2);
+}
+
+.donts-card {
+  background: rgba(255, 107, 107, 0.05);
+  border: 1px solid rgba(255, 107, 107, 0.2);
+}
+
+.dos-card h3 {
+  color: var(--brand-green);
+  font-family: var(--font-display);
+  font-size: 1.6rem;
   margin-bottom: 24px;
 }
 
-.tags-copy-card {
-  background: #F8FAFC;
-  border: 1px solid #E2E8F0;
-  border-radius: 14px;
-  padding: 20px;
-  margin-bottom: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  align-items: center;
+.donts-card h3 {
+  color: var(--brand-coral);
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  margin-bottom: 24px;
 }
 
-.tags-text-block code {
-  font-family: monospace;
-  font-size: 0.95rem;
-  color: #2563EB;
-  font-weight: 700;
-  word-break: break-word;
-  line-height: 1.6;
+.dos-card ul, .donts-card ul {
+  padding-left: 20px;
 }
 
-.btn-copy {
-  font-size: 0.9rem;
-  font-weight: 700;
-}
-
-.collab-reminder-strip {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: #EFF6FF;
-  border: 1px solid #BFDBFE;
-  padding: 10px 20px;
-  border-radius: 9999px;
-  font-size: 0.875rem;
-  color: #10183F;
-}
-
-.collab-bell {
+.dos-card li, .donts-card li {
+  margin-bottom: 16px;
   font-size: 1.1rem;
-}
-
-/* Page CTA Strip */
-.page-cta-strip {
-  padding: 40px 0 90px;
-  background-color: #FFFFFF;
-}
-
-.cta-banner-box {
-  background: linear-gradient(135deg, #10183F 0%, #1E40AF 100%);
-  border-radius: 24px;
-  padding: 48px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 32px;
-  color: #FFFFFF;
-  box-shadow: 0 16px 40px rgba(16, 24, 63, 0.25);
-}
-
-.cta-title {
-  font-family: var(--font-cinematic);
-  font-size: clamp(1.8rem, 2.8vw, 2.4rem);
-  font-weight: 800;
-  color: #FFFFFF;
-  margin-bottom: 8px;
-}
-
-.cta-sub {
-  font-size: 1.05rem;
-  color: #EFF6FF;
-  max-width: 580px;
-}
-
-.cta-banner-btns {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 14px;
-  flex-shrink: 0;
+  color: var(--text-main);
+  line-height: 1.5;
 }
 
 @media (max-width: 992px) {
-  .formats-grid {
-    grid-template-columns: 1fr;
-  }
-  .safe-zone-grid {
-    grid-template-columns: 1fr;
-  }
-  .toolkit-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .cta-banner-box {
-    flex-direction: column;
-    text-align: center;
-    padding: 36px 24px;
-  }
-  .cta-banner-btns {
-    justify-content: center;
-  }
-}
-
-@media (max-width: 580px) {
-  .toolkit-grid {
+  .guide-grid, .dos-donts-grid {
     grid-template-columns: 1fr;
   }
 }

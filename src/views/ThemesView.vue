@@ -1,269 +1,173 @@
 <template>
-  <div class="themes-page">
-    <!-- Page Hero Banner -->
-    <PageBanner
-      currentPage="Themes & Topics"
-      badge="CREATOR'S INSPIRATION GUIDE"
-      badgeIcon="💡"
-      subtitle="Explore 6 compelling thematic tracks tailored for short-form storytelling. Pick a theme, craft your 3-minute reel, and spark positive societal change."
-    >
-      <template #title>
-        Reel Themes & <span class="text-gradient-hero">Content Topics</span>
-      </template>
-
-      <template #actions>
-        <button class="btn-primary" @click="openRegisterModal">
-          <span>Submit Your Reel</span>
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-        </button>
-        <router-link to="/rules" class="btn-secondary">
-          <span>View Guidelines</span>
-        </router-link>
-      </template>
-    </PageBanner>
-
-    <!-- Main Thematic Guide -->
-    <div class="page-content-wrap">
-      <ContentTopics />
-
-      <!-- Storytelling Framework 3-Step Guide -->
-      <section class="framework-section">
-        <div class="container-custom">
-          <div class="section-header text-center">
-            <span class="section-badge">WINNING BLUEPRINT</span>
-            <h2 class="section-title">How to Structure Your 3-Minute Story</h2>
-            <p class="section-subtitle">A proven cinematic structure to maximize emotional engagement and score high with jury members.</p>
+  <div class="page-container">
+    <div class="page-header">
+      <div class="container-custom">
+        <h1 class="page-title">Explore the Themes</h1>
+        <p class="page-subtitle">Choose your path and start creating impact.</p>
+      </div>
+    </div>
+    
+    <div class="container-custom page-content">
+      <div class="themes-list">
+        <div v-for="(theme, idx) in themes" :key="idx" class="theme-row" :style="{ animationDelay: `${idx * 0.15}s` }">
+          <div class="t-img-box">
+            <img :src="theme.img" alt="Theme image" class="t-img" />
+            <div class="t-icon-overlay">{{ theme.icon }}</div>
           </div>
-
-          <div class="framework-grid">
-            <div class="framework-card card-glow">
-              <div class="step-num">01</div>
-              <div class="step-timing">0:00 – 0:15 Sec</div>
-              <h3 class="step-heading">The Irresistible Hook</h3>
-              <p class="step-text">
-                Start in media res (in the middle of the action). Introduce a relatable friction, striking visual juxtaposition, or a question that stops the viewer from scrolling.
-              </p>
-              <div class="step-tip">
-                💡 <strong>Tip:</strong> Avoid long logo intros or static title cards in the first 5 seconds.
-              </div>
-            </div>
-
-            <div class="framework-card card-glow">
-              <div class="step-num">02</div>
-              <div class="step-timing">0:15 – 2:15 Min</div>
-              <h3 class="step-heading">The Core Conflict & Journey</h3>
-              <p class="step-text">
-                Deepen the narrative. Show real people dealing with the issue, present authentic struggles, and maintain quick, rhythmic video pacing.
-              </p>
-              <div class="step-tip">
-                💡 <strong>Tip:</strong> Keep dialogue natural and balance speech with ambient sound and B-roll visuals.
-              </div>
-            </div>
-
-            <div class="framework-card card-glow">
-              <div class="step-num">03</div>
-              <div class="step-timing">2:15 – 3:00 Min</div>
-              <h3 class="step-heading">The Constructive Payoff</h3>
-              <p class="step-text">
-                Conclude with empowerment rather than despair. Give the audience a clear resolution, inspiring insight, or a direct call to civic action.
-              </p>
-              <div class="step-tip">
-                💡 <strong>Tip:</strong> Leave the viewer thinking long after the video ends with a poignant final line.
-              </div>
-            </div>
+          <div class="t-info">
+            <h2>{{ theme.title }}</h2>
+            <p>{{ theme.desc }}</p>
+          </div>
+          <div class="t-action">
+            <button class="btn-secondary">Explore Theme</button>
           </div>
         </div>
-      </section>
-
-      <!-- Bottom Call To Action Banner -->
-      <section class="page-cta-strip">
-        <div class="container-custom">
-          <div class="cta-banner-box">
-            <div class="cta-banner-content">
-              <h2 class="cta-title">Have a Reel Idea Ready?</h2>
-              <p class="cta-sub">Shoot, edit, post on Instagram, tag <strong>@wtl_leadingthechange</strong>, and submit your link here.</p>
-            </div>
-            <div class="cta-banner-btns">
-              <button class="btn-primary btn-lg" @click="openRegisterModal">
-                <span>Submit Your Reel Link</span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-              </button>
-              <router-link to="/prizes" class="btn-secondary">
-                <span>Check Prize Breakdown</span>
-              </router-link>
-            </div>
-          </div>
-        </div>
-      </section>
+      </div>
     </div>
   </div>
 </template>
 
 <script setup>
-import PageBanner from '../components/PageBanner.vue'
-import ContentTopics from '../components/ContentTopics.vue'
-import { useRegisterModal } from '../composables/useRegisterModal'
-
-const { openRegisterModal } = useRegisterModal()
+const themes = [
+  { title: 'Education', desc: 'Ensuring access to quality learning and skill development for underserved youth.', icon: '📚', img: '/education.jpg' },
+  { title: 'Environment', desc: 'Protecting our planet through climate action and restoring natural ecosystems.', icon: '🌱', img: '/theme-environment.jpg' },
+  { title: 'Women Empowerment', desc: 'Championing gender equality and creating safe spaces for women to thrive.', icon: '✊', img: '/theme-women.jpg' },
+  { title: 'Health & Wellbeing', desc: 'Promoting physical health and mental wellbeing in local communities.', icon: '🏥', img: '/theme-health.jpg' },
+  { title: 'Community Development', desc: 'Building better local infrastructure and strengthening neighborhood networks.', icon: '🏘️', img: '/community.jpg' },
+  { title: 'Technology for Good', desc: 'Leveraging digital tools to solve pressing social challenges.', icon: '💻', img: '/theme-tech.jpg' },
+  { title: 'Sustainability', desc: 'Advocating for circular economies and responsible consumption practices.', icon: '♻️', img: '/theme-sustain.jpg' },
+  { title: 'Social Awareness', desc: 'Raising voices against injustice and driving public dialogue for policy changes.', icon: '📢', img: '/theme-awareness.jpg' }
+]
 </script>
 
 <style scoped>
-.text-center {
+.page-container {
+  padding-bottom: 120px;
+  background: var(--bg-secondary);
+  min-height: 100vh;
+}
+
+.page-header {
+  background: linear-gradient(rgba(11, 27, 61, 0.6), rgba(11, 27, 61, 0.75)), url('/education.jpg') center 30%/cover no-repeat;
+  padding: 240px 0 160px;
   text-align: center;
+  color: #FFFFFF;
 }
 
-.section-header {
-  max-width: 720px;
-  margin: 0 auto 50px;
-}
-
-.section-badge {
-  display: inline-block;
+.page-title {
   font-family: var(--font-display);
-  font-size: 0.8rem;
-  font-weight: 800;
-  letter-spacing: 2px;
-  color: #2563EB;
-  text-transform: uppercase;
-  margin-bottom: 12px;
-  background: #EFF6FF;
-  padding: 5px 16px;
-  border-radius: 9999px;
-  border: 1px solid #BFDBFE;
+  font-size: 3.5rem;
+  font-weight: 900;
+  margin-bottom: 16px;
 }
 
-.section-title {
-  font-family: var(--font-cinematic);
-  font-size: clamp(2rem, 3.5vw, 2.8rem);
-  font-weight: 800;
-  color: #10183F;
-  line-height: 1.2;
-  margin-bottom: 12px;
+.page-subtitle {
+  font-size: 1.25rem;
+  color: var(--brand-coral);
+  font-weight: 600;
 }
 
-.section-subtitle {
-  color: #526078;
-  font-size: 1.1rem;
+.page-content {
+  margin-top: -60px;
 }
 
-/* Framework Section */
-.framework-section {
-  padding: 80px 0;
-  background-color: #F8FAFC;
-  border-top: 1px solid #E2E8F0;
-  border-bottom: 1px solid #E2E8F0;
-}
-
-.framework-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 28px;
-}
-
-.framework-card {
-  background: #FFFFFF;
-  border: 1px solid #E2E8F0;
-  border-radius: 20px;
-  padding: 36px 28px;
-  position: relative;
+.themes-list {
   display: flex;
   flex-direction: column;
+  gap: 24px;
 }
 
-.step-num {
-  font-family: var(--font-display);
-  font-size: 2.2rem;
-  font-weight: 900;
-  color: #DBEAFE;
-  line-height: 1;
-  margin-bottom: 6px;
-}
-
-.step-timing {
-  font-size: 0.75rem;
-  font-weight: 800;
-  letter-spacing: 1px;
-  color: #2563EB;
-  text-transform: uppercase;
-  margin-bottom: 12px;
-}
-
-.step-heading {
-  font-family: var(--font-cinematic);
-  font-size: 1.3rem;
-  font-weight: 800;
-  color: #10183F;
-  margin-bottom: 12px;
-}
-
-.step-text {
-  font-size: 0.925rem;
-  color: #526078;
-  line-height: 1.6;
-  margin-bottom: 20px;
-  flex-grow: 1;
-}
-
-.step-tip {
-  background: #EFF6FF;
-  border: 1px solid #BFDBFE;
-  border-radius: 10px;
-  padding: 12px 14px;
-  font-size: 0.825rem;
-  color: #1E40AF;
-  line-height: 1.45;
-}
-
-/* Page CTA Strip */
-.page-cta-strip {
-  padding: 70px 0 90px;
-  background-color: #FFFFFF;
-}
-
-.cta-banner-box {
-  background: linear-gradient(135deg, #10183F 0%, #1E40AF 100%);
+.theme-row {
+  background: var(--bg-card);
   border-radius: 24px;
-  padding: 48px;
+  padding: 24px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
   gap: 32px;
-  color: #FFFFFF;
-  box-shadow: 0 16px 40px rgba(16, 24, 63, 0.25);
+  box-shadow: 0 10px 30px rgba(11, 27, 61, 0.05);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+  border: 1px solid var(--border-subtle);
+  animation: fadeUp 0.6s ease-out backwards;
 }
 
-.cta-title {
-  font-family: var(--font-cinematic);
-  font-size: clamp(1.8rem, 2.8vw, 2.4rem);
-  font-weight: 800;
-  color: #FFFFFF;
-  margin-bottom: 8px;
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-.cta-sub {
-  font-size: 1.05rem;
-  color: #EFF6FF;
-  max-width: 580px;
+.theme-row:hover {
+  transform: translateY(-8px) scale(1.01);
+  box-shadow: 0 20px 50px rgba(11, 27, 61, 0.12);
+  border-color: var(--brand-coral);
 }
 
-.cta-banner-btns {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 14px;
+.t-img-box {
+  width: 200px;
+  height: 140px;
+  border-radius: 16px;
+  position: relative;
+  overflow: hidden;
   flex-shrink: 0;
 }
 
+.t-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.theme-row:hover .t-img {
+  transform: scale(1.1);
+}
+
+.t-icon-overlay {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: #FFFFFF;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.t-info {
+  flex: 1;
+}
+
+.t-info h2 {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  color: var(--brand-navy);
+  margin-bottom: 8px;
+}
+
+.t-info p {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.t-action {
+  flex-shrink: 0;
+  padding-right: 20px;
+}
+
 @media (max-width: 992px) {
-  .framework-grid {
-    grid-template-columns: 1fr;
-  }
-  .cta-banner-box {
+  .theme-row {
     flex-direction: column;
-    text-align: center;
-    padding: 36px 24px;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
   }
-  .cta-banner-btns {
-    justify-content: center;
+  .t-img-box {
+    width: 100%;
+    height: 200px;
   }
 }
 </style>

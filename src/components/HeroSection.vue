@@ -1,13 +1,5 @@
 <template>
-  <section class="hero-carousel-section" @mouseenter="pauseAutoPlay" @mouseleave="resumeAutoPlay">
-    <!-- Ambient Cinematic Lighting & Grid Backdrop -->
-    <div class="hero-backdrop">
-      <div class="ambient-glow glow-blue"></div>
-      <div class="ambient-glow glow-purple"></div>
-      <div class="ambient-glow glow-amber"></div>
-      <div class="backdrop-grid-overlay"></div>
-    </div>
-
+  <section class="hero-carousel-section">
     <!-- Carousel Slides Main Viewport -->
     <div class="carousel-viewport">
       <transition-group name="slide-fade">
@@ -17,7 +9,7 @@
           v-show="currentSlide === idx"
           class="carousel-slide-item"
         >
-          <div class="container-custom slide-grid-layout">
+          <div class="slide-grid-layout">
             <!-- LEFT 50%: Content Column -->
             <div class="slide-left-content">
               <!-- Live Pretitle Badge -->
@@ -74,46 +66,30 @@
 
             <!-- RIGHT 50%: Carousel Image Showcase Column -->
             <div class="slide-right-visual">
-              <div class="visual-carousel-card">
-                <!-- Image Wrapper - Preserves Aspect Ratio Without Distortion -->
-                <div class="visual-image-box">
-                  <img :src="slide.featuredImage" :alt="slide.titleHighlight" class="visual-main-img" />
-                </div>
-
-                <!-- Floating Top-Left Tag Badge -->
-                <div class="floating-visual-badge badge-top-left">
-                  <span class="f-badge-icon">{{ slide.badgeIcon }}</span>
-                  <span class="f-badge-txt">{{ slide.visualTag }}</span>
-                </div>
-
-                <!-- Floating Top-Right Stat Chip -->
-                <div class="floating-visual-badge badge-top-right">
-                  <span class="f-stat-star">⭐</span>
-                  <span class="f-stat-txt">{{ slide.floatingStatTop }}</span>
-                </div>
-
-                <!-- Floating Bottom Metric Pill -->
-                <div class="floating-visual-badge badge-bottom-right">
-                  <span class="f-dot-pulse"></span>
-                  <span class="f-stat-txt">{{ slide.floatingStatBottom }}</span>
-                </div>
-
-                <!-- Small Bottom Glassmorphic Caption Card -->
-                <div class="visual-caption-glass">
-                  <div class="caption-metric-sub">{{ slide.visualSub }}</div>
-                  <h3 class="caption-heading">{{ slide.visualTitle }}</h3>
-                </div>
+              <img :src="slide.featuredImage" :alt="slide.titleHighlight" class="visual-main-img" />
+              
+              <!-- Floating Top-Left Tag Badge -->
+              <div class="floating-visual-badge badge-top-left">
+                <span class="f-badge-icon">{{ slide.badgeIcon }}</span>
+                <span class="f-badge-txt">{{ slide.visualTag }}</span>
               </div>
 
-              <!-- Small Carousel Dot Indicators Below Image -->
-              <div class="carousel-dots-row">
-                <span
-                  v-for="(s, sIdx) in slides"
-                  :key="sIdx"
-                  class="carousel-dot"
-                  :class="{ active: currentSlide === sIdx }"
-                  @click="goToSlide(sIdx)"
-                ></span>
+              <!-- Floating Top-Right Stat Chip -->
+              <div class="floating-visual-badge badge-top-right">
+                <span class="f-stat-star">⭐</span>
+                <span class="f-stat-txt">{{ slide.floatingStatTop }}</span>
+              </div>
+
+              <!-- Floating Bottom Metric Pill -->
+              <div class="floating-visual-badge badge-bottom-right">
+                <span class="f-dot-pulse"></span>
+                <span class="f-stat-txt">{{ slide.floatingStatBottom }}</span>
+              </div>
+
+              <!-- Small Bottom Glassmorphic Caption Card -->
+              <div class="visual-caption-glass">
+                <div class="caption-metric-sub">{{ slide.visualSub }}</div>
+                <h3 class="caption-heading">{{ slide.visualTitle }}</h3>
               </div>
             </div>
           </div>
@@ -129,82 +105,6 @@
       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
     </button>
 
-    <!-- Bottom Carousel Navigation Tabs Bar -->
-    <div class="carousel-tabs-bar">
-      <div class="container-custom">
-        <div class="tabs-grid-container">
-          <div
-            v-for="(slide, idx) in slides"
-            :key="slide.id"
-            class="tab-nav-item"
-            :class="{ 'is-active': currentSlide === idx }"
-            @click="goToSlide(idx)"
-          >
-            <!-- Progress Fill Line -->
-            <div class="tab-progress-track">
-              <div
-                class="tab-progress-fill"
-                :style="{ width: currentSlide === idx ? '100%' : '0%' }"
-              ></div>
-            </div>
-
-            <!-- Tab Content Header -->
-            <div class="tab-info-row">
-              <span class="tab-index-tag">0{{ idx + 1 }}</span>
-              <div class="tab-text-cluster">
-                <span class="tab-main-label">{{ slide.tabTitle }}</span>
-                <span class="tab-sub-label">{{ slide.tabSubtitle }}</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Bottom Metric Ticker Ribbon -->
-    <div class="hero-metric-ribbon">
-      <div class="container-custom">
-        <div class="ribbon-flex-row">
-          <div class="ribbon-node">
-            <span class="ribbon-icon">💰</span>
-            <div class="ribbon-text">
-              <span class="ribbon-val">₹50,000</span>
-              <span class="ribbon-lbl">Champion 1st Cash Prize</span>
-            </div>
-          </div>
-
-          <div class="ribbon-separator"></div>
-
-          <div class="ribbon-node">
-            <span class="ribbon-icon">🗺️</span>
-            <div class="ribbon-text">
-              <span class="ribbon-val">38 + 1</span>
-              <span class="ribbon-lbl">Districts & UT Connected</span>
-            </div>
-          </div>
-
-          <div class="ribbon-separator"></div>
-
-          <div class="ribbon-node">
-            <span class="ribbon-icon">🏆</span>
-            <div class="ribbon-text">
-              <span class="ribbon-val">15+</span>
-              <span class="ribbon-lbl">Category Trophies & Honors</span>
-            </div>
-          </div>
-
-          <div class="ribbon-separator"></div>
-
-          <div class="ribbon-node">
-            <span class="ribbon-icon">📜</span>
-            <div class="ribbon-text">
-              <span class="ribbon-val">100% FREE</span>
-              <span class="ribbon-lbl">Entry & Verified Certificate</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
   </section>
 </template>
 
@@ -245,7 +145,7 @@ const slides = [
   },
   {
     id: 2,
-    featuredImage: '/youth-awareness.jpg',
+    featuredImage: '/youngster_awareness_new.jpg',
     badgeIcon: '⚡',
     badgeText: 'YOUTH LEADERSHIP & SOCIAL AWARENESS',
     titlePrefix: 'Empowering Youngsters To',
@@ -311,19 +211,8 @@ const startAutoPlay = () => {
   if (!autoSlideTimer) {
     autoSlideTimer = setInterval(() => {
       nextSlide()
-    }, 5500)
+    }, 5000)
   }
-}
-
-const pauseAutoPlay = () => {
-  if (autoSlideTimer) {
-    clearInterval(autoSlideTimer)
-    autoSlideTimer = null
-  }
-}
-
-const resumeAutoPlay = () => {
-  startAutoPlay()
 }
 
 onMounted(() => {
@@ -342,113 +231,54 @@ onUnmounted(() => {
 .hero-carousel-section {
   position: relative;
   width: 100%;
-  background: #080D24;
-  color: #FFFFFF;
+  background: #FFFFFF;
+  color: #0F172A;
   overflow: hidden;
-  padding-top: 40px;
+  padding-top: 10px;
   padding-bottom: 0px;
 }
 
-/* Ambient Backdrop Glow & Grid Pattern */
-.hero-backdrop {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  z-index: 0;
-  overflow: hidden;
-}
 
-.backdrop-grid-overlay {
-  position: absolute;
-  inset: 0;
-  background-image: 
-    linear-gradient(to right, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
-  background-size: 48px 48px;
-  mask-image: radial-gradient(ellipse at center, black 40%, transparent 80%);
-  -webkit-mask-image: radial-gradient(ellipse at center, black 40%, transparent 80%);
-}
 
-.ambient-glow {
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(110px);
-  opacity: 0.42;
-  animation: glowFloat 9s ease-in-out infinite alternate;
-}
 
-.glow-blue {
-  width: 550px;
-  height: 550px;
-  background: #2563EB;
-  top: -120px;
-  left: -100px;
-}
-
-.glow-purple {
-  width: 500px;
-  height: 500px;
-  background: #7C3AED;
-  top: 10%;
-  right: -80px;
-  animation-delay: 2.5s;
-}
-
-.glow-amber {
-  width: 400px;
-  height: 400px;
-  background: #F59E0B;
-  bottom: 40px;
-  left: 30%;
-  opacity: 0.22;
-  animation-delay: 4.5s;
-}
-
-@keyframes glowFloat {
-  0% { transform: translate(0, 0) scale(1); opacity: 0.35; }
-  100% { transform: translate(25px, 20px) scale(1.12); opacity: 0.55; }
-}
 
 /* Carousel Viewport */
 .carousel-viewport {
   position: relative;
-  min-height: 520px;
-  z-index: 10;
+  min-height: 85vh;
+  padding: 0;
   display: flex;
   align-items: center;
 }
 
 .carousel-slide-item {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  background: #FFFFFF;
 }
 
 /* Slide Transition Animations */
 .slide-fade-enter-active,
 .slide-fade-leave-active {
-  transition: opacity 0.45s ease, transform 0.45s ease;
+  transition: opacity 0.5s ease-in-out;
 }
 
-.slide-fade-enter-from {
-  opacity: 0;
-  transform: translateY(10px) scale(0.98);
-}
-
+.slide-fade-enter-from,
 .slide-fade-leave-to {
   opacity: 0;
-  transform: translateY(-10px) scale(0.98);
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
 }
 
 /* 50% Left + 50% Right Desktop Two-Column Layout */
 .slide-grid-layout {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 48px;
-  align-items: center;
-  padding-bottom: 28px;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: stretch;
 }
 
 /* LEFT 50%: Content Column */
@@ -456,15 +286,20 @@ onUnmounted(() => {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  width: 50%;
+  padding-left: calc(max(20px, (100% - 1240px) / 2));
+  padding-right: 40px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .slide-badge-pill {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  background: rgba(37, 99, 235, 0.2);
-  border: 1px solid rgba(59, 130, 246, 0.45);
-  color: #93C5FD;
+  background: rgba(37, 99, 235, 0.1);
+  border: 1px solid rgba(37, 99, 235, 0.3);
+  color: #1D4ED8;
   padding: 5px 13px;
   border-radius: 9999px;
   font-family: var(--font-display);
@@ -494,12 +329,12 @@ onUnmounted(() => {
 
 .slide-title {
   font-family: var(--font-cinematic);
-  font-size: clamp(2rem, 3.2vw, 3rem);
+  font-size: clamp(1.8rem, 2.5vw, 2.5rem);
   font-weight: 900;
-  color: #FFFFFF;
+  color: #0F172A;
   line-height: 1.15;
   letter-spacing: -0.5px;
-  margin-bottom: 14px;
+  margin-bottom: 8px;
 }
 
 .title-gradient-span {
@@ -509,11 +344,11 @@ onUnmounted(() => {
 }
 
 .slide-description {
-  font-size: 0.98rem;
-  color: #CBD5E1;
-  line-height: 1.55;
+  font-size: 0.9rem;
+  color: #475569;
+  line-height: 1.45;
   max-width: 520px;
-  margin-bottom: 20px;
+  margin-bottom: 14px;
 }
 
 /* Chips Row */
@@ -521,20 +356,20 @@ onUnmounted(() => {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin-bottom: 22px;
+  margin-bottom: 14px;
 }
 
 .slide-chip-tag {
   display: inline-flex;
   align-items: center;
   gap: 5px;
-  background: rgba(255, 255, 255, 0.07);
-  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
   padding: 5px 12px;
   border-radius: 9999px;
   font-size: 0.78rem;
   font-weight: 600;
-  color: #F8FAFC;
+  color: #334155;
   backdrop-filter: blur(6px);
 }
 
@@ -543,8 +378,8 @@ onUnmounted(() => {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 14px;
-  margin-bottom: 22px;
+  gap: 12px;
+  margin-bottom: 14px;
 }
 
 .hero-main-cta {
@@ -587,15 +422,15 @@ onUnmounted(() => {
   font-weight: 700;
   padding: 13px 20px;
   border-radius: 10px;
-  background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(255, 255, 255, 0.2);
-  color: #FFFFFF;
+  background: #F1F5F9;
+  border-color: #E2E8F0;
+  color: #0F172A;
 }
 
 .hero-sec-cta:hover {
-  background: #FFFFFF;
-  color: #0B112C;
-  border-color: #FFFFFF;
+  background: #E2E8F0;
+  color: #0F172A;
+  border-color: #CBD5E1;
 }
 
 .slide-trust-strip {
@@ -612,55 +447,30 @@ onUnmounted(() => {
 
 .trust-note-text {
   font-size: 0.78rem;
-  color: #94A3B8;
+  color: #64748B;
 }
 
 .trust-note-text strong {
-  color: #E2E8F0;
+  color: #334155;
 }
 
 /* RIGHT 50%: Carousel Image Showcase Column */
 .slide-right-visual {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-}
-
-.visual-carousel-card {
   position: relative;
-  width: 100%;
-  max-width: 550px;
-  aspect-ratio: 1 / 1;
-  border-radius: 22px;
-  overflow: hidden;
-  border: 1.5px solid rgba(255, 255, 255, 0.22);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.55), 0 0 30px rgba(37, 99, 235, 0.25);
-  background: #0B112C;
-  backdrop-filter: blur(12px);
-}
-
-.visual-image-box {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
+  width: 50%;
   display: flex;
-  align-items: center;
+  align-items: stretch;
   justify-content: center;
-  background: #070C20;
+  padding: 0;
 }
 
 .visual-main-img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
-  transition: transform 0.6s ease;
-}
-
-.visual-carousel-card:hover .visual-main-img {
-  transform: scale(1.02);
+  object-fit: cover;
+  object-position: center;
+  -webkit-mask-image: radial-gradient(ellipse at center, black 70%, transparent 100%);
+  mask-image: radial-gradient(ellipse at center, black 70%, transparent 100%);
 }
 
 /* Floating Badges Over Image */
@@ -681,24 +491,24 @@ onUnmounted(() => {
 }
 
 .badge-top-left {
-  top: 12px;
-  left: 12px;
+  top: 24px;
+  left: 24px;
   background: rgba(11, 17, 44, 0.9);
   border: 1px solid rgba(59, 130, 246, 0.55);
   color: #93C5FD;
 }
 
 .badge-top-right {
-  top: 12px;
-  right: 12px;
+  top: 24px;
+  right: 24px;
   background: rgba(15, 23, 42, 0.9);
   border: 1px solid rgba(245, 158, 11, 0.55);
   color: #FDE68A;
 }
 
 .badge-bottom-right {
-  bottom: 68px;
-  right: 12px;
+  bottom: 84px;
+  right: 24px;
   background: rgba(15, 23, 42, 0.9);
   border: 1px solid rgba(16, 185, 129, 0.55);
   color: #A7F3D0;
@@ -718,17 +528,17 @@ onUnmounted(() => {
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 12px 16px;
+  padding: 24px;
   z-index: 6;
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 4px;
   background: linear-gradient(to top, rgba(8, 13, 36, 0.96) 0%, rgba(8, 13, 36, 0.6) 80%, transparent 100%);
 }
 
 .caption-metric-sub {
   font-family: var(--font-display);
-  font-size: 0.58rem;
+  font-size: 0.65rem;
   font-weight: 800;
   letter-spacing: 1px;
   color: #F59E0B;
@@ -737,7 +547,7 @@ onUnmounted(() => {
 
 .caption-heading {
   font-family: var(--font-cinematic);
-  font-size: 0.95rem;
+  font-size: 1.25rem;
   font-weight: 800;
   color: #FFFFFF;
   margin: 0;
@@ -772,14 +582,14 @@ onUnmounted(() => {
 /* Outer Edge Navigation Arrows */
 .carousel-arrow-btn {
   position: absolute;
-  top: 42%;
+  top: 50%;
   transform: translateY(-50%);
-  width: 44px;
-  height: 44px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  color: #FFFFFF;
+  background: rgba(15, 23, 42, 0.1);
+  border: 1px solid rgba(15, 23, 42, 0.2);
+  color: #0F172A;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -933,25 +743,28 @@ onUnmounted(() => {
 /* Responsive Design */
 @media (max-width: 1024px) {
   /* Tablet: 55% Content + 45% Image */
-  .slide-grid-layout {
-    grid-template-columns: 1.1fr 0.9fr;
-    gap: 32px;
+  .slide-left-content {
+    width: 55%;
+    padding-right: 32px;
   }
-  .visual-carousel-card {
-    max-width: 440px;
+  .slide-right-visual {
+    width: 45%;
   }
 }
 
 @media (max-width: 768px) {
   /* Mobile: Stack vertically with content first and carousel below */
   .slide-grid-layout {
-    grid-template-columns: 1fr;
+    flex-direction: column;
     text-align: center;
-    gap: 32px;
     padding-bottom: 20px;
   }
   .slide-left-content {
+    width: 100%;
     align-items: center;
+    padding-right: calc(max(20px, (100% - 1240px) / 2));
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
   .slide-chips-row {
     justify-content: center;
@@ -964,12 +777,12 @@ onUnmounted(() => {
   }
   .slide-right-visual {
     width: 100%;
+    height: 200px;
     margin: 0 auto;
   }
-  .visual-carousel-card {
-    width: 90%;
-    max-width: 90%;
-    margin: 0 auto;
+  .visual-main-img {
+    height: 100%;
+    object-fit: contain;
   }
   .tabs-grid-container {
     grid-template-columns: 1fr;
