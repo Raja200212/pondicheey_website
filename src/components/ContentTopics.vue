@@ -31,7 +31,7 @@
 const themes = [
   { id: 1, title: 'Education', desc: 'Ensuring access to quality learning and skill development.', icon: '📚', img: '/education.jpg' },
   { id: 2, title: 'Environment', desc: 'Protecting our planet and restoring natural ecosystems.', icon: '🌱', img: '/theme-environment.jpg' },
-  { id: 3, title: 'Women Empowerment', desc: 'Championing equality and supporting female leaders.', icon: '✊', img: '/theme-women.jpg' },
+  { id: 3, title: 'Women Empowerment', desc: 'Championing equality and supporting female leaders.', icon: '✊', img: '/theme-women-new.jpg' },
   { id: 4, title: 'Health & Wellbeing', desc: 'Promoting physical and mental health in the community.', icon: '🏥', img: '/theme-health.jpg' }
 ]
 </script>
@@ -99,8 +99,8 @@ const themes = [
 
 .theme-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 16px 40px rgba(11, 27, 61, 0.08);
-  border-color: var(--border-highlight);
+  box-shadow: 0 20px 50px rgba(37, 99, 235, 0.15);
+  border-color: #2563EB;
 }
 
 .card-img-top {

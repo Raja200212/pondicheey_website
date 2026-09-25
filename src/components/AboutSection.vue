@@ -18,7 +18,7 @@
         </div>
         <div class="editorial-image">
           <div class="image-wrapper">
-            <img src="/community.jpg" alt="Young volunteers" class="organic-img" />
+            <img src="/indian_youth_leaders.jpg" alt="Young Indian leaders" class="organic-img" />
             <div class="floating-stat-box">
               <span class="stat-num">50k+</span>
               <span class="stat-lbl">Lives Impacted</span>
@@ -32,8 +32,8 @@
     <div class="impact-matters-wrap">
       <div class="container-custom">
         <div class="impact-header">
-          <h2 class="section-title text-white">Why Social Impact Matters</h2>
-          <p class="impact-subtitle text-white">Individual actions, when united, have the power to transform entire communities and create lasting systemic change.</p>
+          <h2 class="section-title">Why Social Impact Matters</h2>
+          <p class="impact-subtitle">Individual actions, when united, have the power to transform entire communities and create lasting systemic change.</p>
         </div>
         
         <div class="stats-grid">
@@ -201,7 +201,7 @@
 
 /* Impact Section */
 .impact-matters-wrap {
-  background: var(--brand-navy);
+  background: #FFFFFF;
   padding: 100px 0;
   border-radius: 40px;
   margin: 0 20px;
@@ -217,7 +217,8 @@
 
 .impact-subtitle {
   font-size: 1.15rem;
-  opacity: 0.85;
+  color: #64748B;
+  opacity: 0.9;
 }
 
 .stats-grid {
@@ -227,15 +228,12 @@
 }
 
 .stat-card {
-  background: linear-gradient(145deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.01) 100%);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  border-top-color: rgba(255, 255, 255, 0.35);
-  border-left-color: rgba(255, 255, 255, 0.35);
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
   border-radius: 28px;
   padding: 40px 24px;
   text-align: center;
-  backdrop-filter: blur(12px);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   position: relative;
   overflow: hidden;
@@ -256,8 +254,8 @@
 
 .stat-card:hover {
   transform: translateY(-12px);
-  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
-  border-color: rgba(255, 107, 107, 0.4);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1);
+  border-color: rgba(255, 107, 107, 0.3);
 }
 
 .stat-card:hover::before {
@@ -268,7 +266,7 @@
   font-family: var(--font-display, 'Inter', sans-serif);
   font-size: 3.8rem;
   font-weight: 900;
-  background: linear-gradient(135deg, #FFFFFF 0%, #94A3B8 100%);
+  background: linear-gradient(135deg, #01579B 0%, #2563EB 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 12px;
@@ -277,7 +275,7 @@
 
 .stat-name {
   font-weight: 800;
-  color: #FF6B6B;
+  color: #2563EB;
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: 0.85rem;

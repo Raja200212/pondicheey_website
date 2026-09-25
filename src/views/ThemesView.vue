@@ -31,7 +31,7 @@
 const themes = [
   { title: 'Education', desc: 'Ensuring access to quality learning and skill development for underserved youth.', icon: '📚', img: '/education.jpg' },
   { title: 'Environment', desc: 'Protecting our planet through climate action and restoring natural ecosystems.', icon: '🌱', img: '/theme-environment.jpg' },
-  { title: 'Women Empowerment', desc: 'Championing gender equality and creating safe spaces for women to thrive.', icon: '✊', img: '/theme-women.jpg' },
+  { title: 'Women Empowerment', desc: 'Championing gender equality and creating safe spaces for women to thrive.', icon: '✊', img: '/theme-women-new.jpg' },
   { title: 'Health & Wellbeing', desc: 'Promoting physical health and mental wellbeing in local communities.', icon: '🏥', img: '/theme-health.jpg' },
   { title: 'Community Development', desc: 'Building better local infrastructure and strengthening neighborhood networks.', icon: '🏘️', img: '/community.jpg' },
   { title: 'Technology for Good', desc: 'Leveraging digital tools to solve pressing social challenges.', icon: '💻', img: '/theme-tech.jpg' },
@@ -97,8 +97,8 @@ const themes = [
 
 .theme-row:hover {
   transform: translateY(-8px) scale(1.01);
-  box-shadow: 0 20px 50px rgba(11, 27, 61, 0.12);
-  border-color: var(--brand-coral);
+  box-shadow: 0 20px 50px rgba(37, 99, 235, 0.15);
+  border-color: #2563EB;
 }
 
 .t-img-box {

@@ -108,8 +108,8 @@
 }
 
 .page-header {
-  background: linear-gradient(rgba(11, 27, 61, 0.6), rgba(11, 27, 61, 0.75)), url('/community.jpg') center 90%/cover no-repeat;
-  padding: 500px 0 200px;
+  background: linear-gradient(rgba(11, 27, 61, 0.6), rgba(11, 27, 61, 0.75)), url('/indian_creators_filming.jpg') center 30%/cover no-repeat;
+  padding: 300px 0 200px;
   text-align: center;
   color: #FFFFFF;
 }

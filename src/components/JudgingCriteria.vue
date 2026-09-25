@@ -130,8 +130,8 @@
 
 .criteria-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 20px 50px rgba(11, 27, 61, 0.1);
-  border-color: rgba(37, 99, 235, 0.2);
+  box-shadow: 0 20px 50px rgba(37, 99, 235, 0.15);
+  border-color: #2563EB;
 }
 
 .criteria-card:hover::after {
