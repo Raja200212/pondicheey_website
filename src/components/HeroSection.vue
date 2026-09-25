@@ -96,7 +96,7 @@ let autoSlideTimer = null
 const slides = [
   {
     id: 1,
-    featuredImage: '/tn-map-3d-nobg.png',
+    featuredImage: '/Screenshot 2026-09-25 165328.png',
     badgeIcon: '🗺️',
     badgeText: 'STATE-WIDE REEL COMPETITION • 38+1 DISTRICTS',
     titlePrefix: 'Create a 3-Minute Reel,',
@@ -121,7 +121,7 @@ const slides = [
   },
   {
     id: 2,
-    featuredImage: '/youth-awareness-3d-nobg.png',
+    featuredImage: '/tn-map-3d-nobg.png',
     badgeIcon: '⚡',
     badgeText: 'YOUTH LEADERSHIP & SOCIAL AWARENESS',
     titlePrefix: 'Empowering Youngsters To',
@@ -146,7 +146,7 @@ const slides = [
   },
   {
     id: 3,
-    featuredImage: '/prize-trophy-nobg.png',
+    featuredImage: '/8bca2415-283f-4b71-aa6a-4dfd149e920c.jpg',
     badgeIcon: '🏆',
     badgeText: 'HONORS, TROPHIES & ₹90,000+ CASH REWARDS',
     titlePrefix: 'Win Big with',
