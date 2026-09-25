@@ -14,13 +14,13 @@
   --brand-blue-hover: #1D4ED8;
   --brand-blue-light: #EFF6FF;
   --brand-blue-border: #BFDBFE;
-  
+
   --bg-primary: #FFFFFF;
   --bg-secondary: #F8FAFC;
   --bg-card: #FFFFFF;
   --bg-card-hover: #FFFFFF;
   --bg-glass: rgba(255, 255, 255, 0.96);
-  
+
   --text-main: #10183F;
   --text-heading: #10183F;
   --text-muted: #526078;
@@ -68,13 +68,16 @@ body {
 ::-webkit-scrollbar {
   width: 8px;
 }
+
 ::-webkit-scrollbar-track {
   background: #F3F6FA;
 }
+
 ::-webkit-scrollbar-thumb {
   background: #CBD5E1;
   border-radius: 4px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
   background: #94A3B8;
 }
@@ -83,6 +86,7 @@ body {
 .font-display {
   font-family: var(--font-display);
 }
+
 .font-cinematic {
   font-family: var(--font-cinematic);
 }
@@ -309,13 +313,29 @@ body {
 
 /* Keyframes */
 @keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-8px); }
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
 }
 
 @keyframes pulse-glow {
-  0%, 100% { opacity: 0.5; transform: scale(1); }
-  50% { opacity: 0.9; transform: scale(1.05); }
+
+  0%,
+  100% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.9;
+    transform: scale(1.05);
+  }
 }
 
 .animate-float {
