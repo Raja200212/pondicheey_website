@@ -28,15 +28,24 @@
 </template>
 
 <script setup>
+import techImg from '../images/technologyForGood.jpeg'
+import awarenessImg from '../images/SocialAwareness.jpeg'
+import sustainImg from '../images/Sustainability.jpeg'
+import educationImg from '../images/Education.jpeg'
+import environmentImg from '../images/Environment.jpeg'
+import womenEmpowermentImg from '../images/WomenEmpowerment.jpeg'
+import wellbeingImg from '../images/wellbeing.jpeg'
+import communityImg from '../images/community.jpeg'
+
 const themes = [
-  { title: 'Education', desc: 'Ensuring access to quality learning and skill development for underserved youth.', icon: '📚', img: '/education.jpg' },
-  { title: 'Environment', desc: 'Protecting our planet through climate action and restoring natural ecosystems.', icon: '🌱', img: '/theme-environment.jpg' },
-  { title: 'Women Empowerment', desc: 'Championing gender equality and creating safe spaces for women to thrive.', icon: '✊', img: '/theme-women-new.jpg' },
-  { title: 'Health & Wellbeing', desc: 'Promoting physical health and mental wellbeing in local communities.', icon: '🏥', img: '/theme-health.jpg' },
-  { title: 'Community Development', desc: 'Building better local infrastructure and strengthening neighborhood networks.', icon: '🏘️', img: '/community.jpg' },
-  { title: 'Technology for Good', desc: 'Leveraging digital tools to solve pressing social challenges.', icon: '💻', img: '/theme-tech.jpg' },
-  { title: 'Sustainability', desc: 'Advocating for circular economies and responsible consumption practices.', icon: '♻️', img: '/theme-sustain.jpg' },
-  { title: 'Social Awareness', desc: 'Raising voices against injustice and driving public dialogue for policy changes.', icon: '📢', img: '/theme-awareness.jpg' }
+  { title: 'Education', desc: 'Ensuring access to quality learning and skill development for underserved youth.', icon: '📚', img: educationImg },
+  { title: 'Environment', desc: 'Protecting our planet through climate action and restoring natural ecosystems.', icon: '🌱', img: environmentImg },
+  { title: 'Women Empowerment', desc: 'Championing gender equality and creating safe spaces for women to thrive.', icon: '✊', img: womenEmpowermentImg },
+  { title: 'Health & Wellbeing', desc: 'Promoting physical health and mental wellbeing in local communities.', icon: '🏥', img: wellbeingImg },
+  { title: 'Community Development', desc: 'Building better local infrastructure and strengthening neighborhood networks.', icon: '🏘️', img: communityImg },
+  { title: 'Technology for Good', desc: 'Leveraging digital tools to solve pressing social challenges.', icon: '💻', img: techImg },
+  { title: 'Sustainability', desc: 'Advocating for circular economies and responsible consumption practices.', icon: '♻️', img: sustainImg },
+  { title: 'Social Awareness', desc: 'Raising voices against injustice and driving public dialogue for policy changes.', icon: '📢', img: awarenessImg }
 ]
 </script>
 

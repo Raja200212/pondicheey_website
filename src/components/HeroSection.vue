@@ -87,6 +87,8 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
 import { useRegisterModal } from '../composables/useRegisterModal'
+import slide1Img from '../images/slide1.jpeg'
+import slide2Img from '../images/slide2.jpeg'
 
 const { openRegisterModal } = useRegisterModal()
 
@@ -96,7 +98,7 @@ let autoSlideTimer = null
 const slides = [
   {
     id: 1,
-    featuredImage: '/Screenshot 2026-09-25 165328.png',
+    featuredImage: slide1Img,
     badgeIcon: '🗺️',
     badgeText: 'STATE-WIDE REEL COMPETITION • 38+1 DISTRICTS',
     titlePrefix: 'Create a 3-Minute Reel,',
@@ -121,7 +123,7 @@ const slides = [
   },
   {
     id: 2,
-    featuredImage: '/tn-map-3d-nobg.png',
+    featuredImage: slide2Img,
     badgeIcon: '⚡',
     badgeText: 'YOUTH LEADERSHIP & SOCIAL AWARENESS',
     titlePrefix: 'Empowering Youngsters To',
@@ -439,20 +441,20 @@ onUnmounted(() => {
 /* RIGHT 50%: Carousel Image Showcase Column */
 .slide-right-visual {
   position: relative;
-  width: 50%;
+  width: 70%;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 0;
-  min-height: 400px;
+  min-height: 600px;
 }
 
 .visual-main-img {
   width: 100%;
-  height: auto;
-  max-height: 80vh;
-  object-fit: contain;
+  height: 650px;
+  object-fit: cover;
   object-position: center;
+  border-radius: 16px;
 }
 
 .floating-visual-badge {
@@ -752,12 +754,12 @@ onUnmounted(() => {
   }
   .slide-right-visual {
     width: 100%;
-    height: 200px;
+    height: 600px;
     margin: 0 auto;
   }
   .visual-main-img {
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
   }
   .tabs-grid-container {
     grid-template-columns: 1fr;

@@ -28,11 +28,15 @@
 </template>
 
 <script setup>
+import educationImg from '../images/Education.jpeg'
+import environmentImg from '../images/Environment.jpeg'
+import womenEmpowermentImg from '../images/WomenEmpowerment.jpeg'
+import wellbeingImg from '../images/wellbeing.jpeg'
 const themes = [
-  { id: 1, title: 'Education', desc: 'Ensuring access to quality learning and skill development.', icon: '📚', img: '/education.jpg' },
-  { id: 2, title: 'Environment', desc: 'Protecting our planet and restoring natural ecosystems.', icon: '🌱', img: '/theme-environment.jpg' },
-  { id: 3, title: 'Women Empowerment', desc: 'Championing equality and supporting female leaders.', icon: '✊', img: '/theme-women-new.jpg' },
-  { id: 4, title: 'Health & Wellbeing', desc: 'Promoting physical and mental health in the community.', icon: '🏥', img: '/theme-health.jpg' }
+  { id: 1, title: 'Education', desc: 'Ensuring access to quality learning and skill development.', icon: '📚', img: educationImg },
+  { id: 2, title: 'Environment', desc: 'Protecting our planet and restoring natural ecosystems.', icon: '🌱', img: environmentImg },
+  { id: 3, title: 'Women Empowerment', desc: 'Championing equality and supporting female leaders.', icon: '✊', img: womenEmpowermentImg },
+  { id: 4, title: 'Health & Wellbeing', desc: 'Promoting physical and mental health in the community.', icon: '🏥', img: wellbeingImg }
 ]
 </script>
 

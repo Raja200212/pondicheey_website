@@ -18,7 +18,7 @@
         </div>
         <div class="editorial-image">
           <div class="image-wrapper">
-            <img src="/indian_youth_leaders.jpg" alt="Young Indian leaders" class="organic-img" />
+            <img src="../images/empowerment.jpeg" alt="Young Indian leaders" class="organic-img" />
             <div class="floating-stat-box">
               <span class="stat-num">50k+</span>
               <span class="stat-lbl">Lives Impacted</span>

@@ -155,7 +155,7 @@
 /* Final CTA */
 .final-cta {
   position: relative;
-  background: url('/volunteers.jpg') center 40%/cover no-repeat;
+  background: url('../images/community.jpeg') center 40%/cover no-repeat;
   padding: 160px 0;
   text-align: center;
   margin: 0 20px 40px 20px;

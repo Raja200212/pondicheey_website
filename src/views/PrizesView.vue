@@ -187,9 +187,9 @@
 
 .p-rank {
   font-family: var(--font-display);
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 900;
-  color: var(--border-highlight);
+  color: var(--brand-navy);
   margin-bottom: 16px;
 }
 
