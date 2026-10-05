@@ -53,7 +53,7 @@
               <img src="/logo.png" alt="We The Leaders Logo" class="brand-logo-img" />
             </div>
             <div class="brand-text">
-              <span class="org-name">WE THE LEADERS</span>
+              <span class="org-name">LEADING THE CHANGE</span>
               <span class="event-title">REELS FOR REAL CHANGE</span>
             </div>
           </router-link>

@@ -2,7 +2,7 @@
   <div class="page-container">
     <div class="page-header">
       <div class="container-custom">
-        <h1 class="page-title">About We The Leaders</h1>
+        <h1 class="page-title">About The Reels For Real Change</h1>
         <p class="page-subtitle">A movement to empower the next generation of social changemakers.</p>
       </div>
     </div>
