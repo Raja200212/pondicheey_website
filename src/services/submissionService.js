@@ -48,24 +48,47 @@ export async function submitToGoogleSheet(submissionData) {
     collabCheck: submissionData.collabCheck ? 'Yes' : 'No'
   }
 
-  try {
-    const formData = new URLSearchParams()
-    Object.keys(payload).forEach(key => {
-      formData.append(key, payload[key])
-    })
+  const formData = new URLSearchParams()
+  Object.keys(payload).forEach(key => {
+    formData.append(key, payload[key])
+  })
 
-    await fetch(SCRIPT_URL, {
+  try {
+    // Attempt 1: Standard request to try and get the sequential ID from the backend
+    let response = await fetch(SCRIPT_URL, {
       method: 'POST',
-      mode: 'no-cors',
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded'
       },
       body: formData.toString()
     })
+    
+    let result = null
+    try {
+      result = await response.json()
+    } catch (parseErr) {
+      // Ignore parse error, it might not return JSON
+    }
 
-    return { success: true }
+    return { 
+      success: true, 
+      serverRegistrationId: result?.registrationId || null 
+    }
   } catch (error) {
-    console.error('Error submitting to Google Sheet:', error)
-    return { success: false, error }
+    // Attempt 2: Fallback to no-cors if CORS is not configured on the Apps Script
+    try {
+      await fetch(SCRIPT_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        body: formData.toString()
+      })
+      return { success: true, serverRegistrationId: null }
+    } catch (fallbackError) {
+      console.error('Error submitting to Google Sheet:', fallbackError)
+      return { success: false, error: fallbackError }
+    }
   }
 }
