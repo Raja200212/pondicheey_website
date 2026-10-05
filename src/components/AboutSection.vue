@@ -4,10 +4,10 @@
     <div class="container-custom">
       <div class="editorial-layout">
         <div class="editorial-text">
-          <span class="section-badge">WHAT IS WE THE LEADERS?</span>
+          <span class="section-badge">WHAT IS REELS FOR REAL CHANGE?</span>
           <h2 class="section-title">Empowering the Next Generation of Changemakers</h2>
           <p class="section-desc">
-            We The Leaders is not just a competition—it's a movement. We provide a platform for passionate young individuals to step up, take action, and drive meaningful social change in their communities. 
+            Reels For Real Change is not just a competition—it's a movement. We provide a platform for passionate young individuals to step up, take action, and drive meaningful social change in their communities. 
           </p>
           <p class="section-desc">
             Through creative storytelling and grassroots action, we aim to amplify the voices of youth who are dedicated to solving real-world challenges, from environmental sustainability to education and social equality.

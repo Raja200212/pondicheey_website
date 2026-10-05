@@ -9,7 +9,7 @@
               <img src="/logo.png" alt="We The Leaders Logo" class="footer-logo-img" />
             </div>
             <div class="logo-text">
-              <span class="footer-org">WE THE LEADERS</span>
+              <span class="footer-org">LEADING THE CHANGE</span>
               <span class="footer-event">REELS FOR REAL CHANGE</span>
             </div>
           </router-link>
@@ -28,7 +28,7 @@
           <h4 class="footer-heading">Quick Navigation</h4>
           <ul class="footer-links-list">
             <li><router-link to="/">Home Page</router-link></li>
-            <li><router-link to="/about">About We The Leaders</router-link></li>
+            <li><router-link to="/about">About The Reels For Real Change</router-link></li>
             <li><router-link to="/themes">Reel Themes & Topics</router-link></li>
             <li><router-link to="/content">Creator & Content Guide</router-link></li>
             <li><router-link to="/prizes">Prize Pool & Awards</router-link></li>
