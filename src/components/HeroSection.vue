@@ -441,18 +441,18 @@ onUnmounted(() => {
 /* RIGHT 50%: Carousel Image Showcase Column */
 .slide-right-visual {
   position: relative;
-  width: 70%;
+  width: 45%;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0;
+  padding: 0 20px 0 0;
   min-height: 600px;
 }
 
 .visual-main-img {
   width: 100%;
-  height: 650px;
-  object-fit: cover;
+  height: 600px;
+  object-fit: contain;
   object-position: center;
   border-radius: 16px;
 }
