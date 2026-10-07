@@ -414,10 +414,14 @@ const validateForm = () => {
 
 const getNextRegistrationId = () => {
   const STORAGE_KEY = 'wtl_rrc_counter'
-  let currentCount = parseInt(localStorage.getItem(STORAGE_KEY) || '1000', 10)
+  // Start from 0, increment by 1 each time
+  let currentCount = parseInt(localStorage.getItem(STORAGE_KEY) || '0', 10)
   currentCount += 1
   localStorage.setItem(STORAGE_KEY, currentCount.toString())
-  return `WTL-RRC-${currentCount}`
+  
+  // WTL-RRC-10 is the common prefix, followed by a 2-digit auto-incrementing number (01, 02, 03...)
+  const paddedCount = currentCount.toString().padStart(2, '0')
+  return `WTL-RRC-10${paddedCount}`
 }
 
 const handleSubmit = async () => {
@@ -452,10 +456,12 @@ const handleSubmit = async () => {
       // Overwrite the local generated ID with the server one to ensure global sequence
       submissionRecord.registrationId = result.serverRegistrationId
       // Also update local storage counter so the next local one at least starts higher
-      const parts = result.serverRegistrationId.split('-')
-      const numPart = parts[parts.length - 1]
-      if (!isNaN(parseInt(numPart))) {
-        localStorage.setItem('wtl_rrc_counter', parseInt(numPart).toString())
+      const serverId = result.serverRegistrationId
+      if (serverId.startsWith('WTL-RRC-10')) {
+        const numPart = serverId.replace('WTL-RRC-10', '')
+        if (!isNaN(parseInt(numPart, 10))) {
+          localStorage.setItem('wtl_rrc_counter', parseInt(numPart, 10).toString())
+        }
       }
     }
   } catch (err) {

@@ -2,8 +2,11 @@
   <div class="page-container">
     <div class="page-header">
       <div class="container-custom">
-        <h1 class="page-title">Rules & Eligibility</h1>
-        <p class="page-subtitle">Everything you need to know before joining the movement.</p>
+        <h1 class="page-title">Rules & Regulations</h1>
+        <p class="page-subtitle">Tamil Nadu & Puducherry • 38+1 Districts</p>
+        <div class="header-highlights">
+          <span>100% FREE Registration</span> • <span>SOLO / TEAM (Up to 4)</span> • <span>Deadline: 25 OCT 2026</span>
+        </div>
       </div>
     </div>
     
@@ -11,54 +14,118 @@
       <div class="rules-accordion">
         
         <div class="r-card">
-          <div class="r-summary">Eligibility</div>
+          <div class="r-summary">1. Eligibility & Participation</div>
           <div class="r-content">
             <ul>
-              <li>Participants must be aged between 16 and 35 years.</li>
-              <li>You can participate as an individual or form a team of up to 4 members.</li>
-              <li>The initiative must take place within the designated regions (Tamil Nadu or Puducherry).</li>
-              <li>Both students and working professionals are welcome.</li>
+              <li><strong>Eligibility:</strong> Open to participants from Tamil Nadu and Puducherry.</li>
+              <li><strong>Participation:</strong> Solo or team entries are allowed, with a maximum of 4 members per team.</li>
+              <li><strong>Registration:</strong> Participation and registration are completely free.</li>
+              <li><strong>Certificate:</strong> Eligible participants will receive a verified participation certificate, subject to competition requirements.</li>
             </ul>
           </div>
         </div>
 
         <div class="r-card">
-          <div class="r-summary">Participation Rules</div>
+          <div class="r-summary">2. Reel Requirements</div>
           <div class="r-content">
             <ul>
-              <li>Only one project submission per team or individual is allowed.</li>
-              <li>The project must address at least one of the 8 official themes.</li>
-              <li>All project activities must comply with local laws and regulations.</li>
-              <li>Projects must have been initiated or significantly executed within the last 12 months.</li>
+              <li><strong>Duration:</strong> Each reel must be between 1 and 3 minutes.</li>
+              <li><strong>Format:</strong> Vertical 9:16 format only.</li>
+              <li><strong>Resolution:</strong> Minimum 1080p.</li>
+              <li><strong>Language:</strong> Tamil, English and other local languages are allowed.</li>
+              <li><strong>Subtitles:</strong> English subtitles are compulsory.</li>
+              <li><strong>Theme:</strong> The reel must clearly address one of the official impact themes.</li>
             </ul>
           </div>
         </div>
 
         <div class="r-card">
-          <div class="r-summary">Content & Submission Requirements</div>
+          <div class="r-summary">3. Official Impact Themes</div>
           <div class="r-content">
             <ul>
-              <li>Submissions must include a 1-3 minute video documenting the impact.</li>
-              <li>A written impact summary (max 500 words) must accompany the video.</li>
-              <li>All content must be original. Use of copyrighted material without permission will result in disqualification.</li>
-              <li>Submissions must be made through the official portal before the deadline.</li>
+              <li>01 Youth Leadership</li>
+              <li>02 Social Awareness</li>
+              <li>03 Civic Pride</li>
+              <li>04 Environmental Sustainability</li>
+              <li>05 Gender Equality</li>
+              <li>06 Other officially announced impact themes</li>
             </ul>
           </div>
         </div>
 
         <div class="r-card">
-          <div class="r-summary">Disqualification Conditions</div>
+          <div class="r-summary">4. Instagram Submission Process</div>
+          <div class="r-content">
+            <ol class="custom-list">
+              <li>Complete the official registration form with the required details.</li>
+              <li>Post the completed reel on your public Instagram profile.</li>
+              <li>Send a Collab Request to <strong>@wtl_leadingthechange</strong>.</li>
+              <li>Submit the published Instagram Reel link through the registration form.</li>
+              <li>Save the Registration ID received after successful submission.</li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="r-card">
+          <div class="r-summary">5. Originality & Content Standards</div>
           <div class="r-content">
             <ul>
-              <li>Plagiarizing another team's project or impact metrics.</li>
-              <li>Falsifying data, impact numbers, or community testimonials.</li>
-              <li>Submitting content that is discriminatory, offensive, or promotes hate speech.</li>
-              <li>Failure to provide proof of impact if selected as a finalist.</li>
+              <li><strong>Original Work:</strong> Submitted reels must be original content created by the participant/team.</li>
+              <li><strong>Rights & Permissions:</strong> Participants are responsible for permissions relating to third-party footage, music, images, logos or copyrighted material.</li>
+              <li><strong>Responsible Content:</strong> Content must not contain hateful, abusive, discriminatory, defamatory, sexually explicit or otherwise inappropriate material.</li>
+              <li><strong>Authenticity:</strong> Content should be respectful, responsible and relevant to the chosen theme.</li>
+              <li><strong>Safety:</strong> Participants must not create content that places themselves or others at unreasonable risk.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="r-card">
+          <div class="r-summary">6. Submission & Deadline</div>
+          <div class="r-content">
+            <ul>
+              <li><strong>Last Date:</strong> All entries must be submitted on or before 25 October 2026.</li>
+              <li><strong>Public Profile:</strong> The Instagram profile used for submission must remain public for verification.</li>
+              <li><strong>Valid Entry:</strong> The reel must satisfy all duration, format, resolution, subtitle and theme requirements.</li>
+              <li><strong>Late Entries:</strong> Entries submitted after the deadline may not be considered.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="r-card">
+          <div class="r-summary">7. Evaluation & Recognition</div>
+          <div class="r-content">
+            <ul>
+              <li><strong>Theme Relevance:</strong> Clarity and connection to the selected impact theme.</li>
+              <li><strong>Creativity:</strong> Originality of concept, storytelling and presentation.</li>
+              <li><strong>Social Impact:</strong> Strength of the message and potential to inspire positive change.</li>
+              <li><strong>Execution:</strong> Overall quality, editing, visuals, clarity and effective use of the reel format.</li>
+              <li><strong>Recognition:</strong> Selected entries may receive prizes, rewards and special category recognitions as announced by the organisers.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="r-card">
+          <div class="r-summary">8. Disqualification</div>
+          <div class="r-content">
+            <ul>
+              <li>Entries that fail to follow the official requirements may be rejected.</li>
+              <li>Plagiarised, duplicate or unauthorised content may lead to disqualification.</li>
+              <li>Prohibited or inappropriate content will not be considered.</li>
+              <li>False or misleading registration information may invalidate an entry.</li>
+              <li>The organisers reserve the right to disqualify entries that breach the competition rules.</li>
             </ul>
           </div>
         </div>
 
       </div>
+      
+      <div class="important-note text-center">
+        <h3 class="note-title">IMPORTANT</h3>
+        <p>Please review the complete guidelines and theme details through the official registration link before submitting your reel.</p>
+        <div class="tagline">REGISTER • CREATE • INSPIRE</div>
+        <router-link to="/register" class="btn-primary mt-4">Go To Official Registration</router-link>
+      </div>
+
     </div>
   </div>
 </template>
@@ -71,11 +138,11 @@
 }
 
 .page-header {
-  background-image: linear-gradient(rgba(11, 27, 61, 0.6), rgba(11, 27, 61, 0.75)), url('/rules-eligibility-new.jpg');
+  background-image: linear-gradient(rgba(11, 27, 61, 0.7), rgba(11, 27, 61, 0.85)), url('/rules-eligibility-new.jpg');
   background-position: center 90%;
   background-size: cover;
   background-repeat: no-repeat;
-  padding: 300px 0 160px;
+  padding: 220px 0 120px;
   text-align: center;
   color: #FFFFFF;
 }
@@ -85,20 +152,38 @@
   font-size: 3.5rem;
   font-weight: 900;
   margin-bottom: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .page-subtitle {
   font-size: 1.25rem;
   color: var(--brand-coral);
   font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.header-highlights {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px 24px;
+  border-radius: 50px;
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.header-highlights span {
+  color: #F8FAFC;
 }
 
 .page-content {
-  margin-top: 40px;
+  margin-top: 50px;
 }
 
 .rules-accordion {
-  max-width: 800px;
+  max-width: 850px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -115,13 +200,13 @@
 }
 
 .r-card:hover {
-  box-shadow: 0 8px 25px rgba(11, 27, 61, 0.06);
+  box-shadow: 0 8px 25px rgba(11, 27, 61, 0.08);
 }
 
 .r-summary {
   padding: 24px 32px;
   font-family: var(--font-display);
-  font-size: 1.3rem;
+  font-size: 1.25rem;
   font-weight: 800;
   color: var(--brand-navy);
   cursor: pointer;
@@ -153,7 +238,7 @@
 }
 
 .r-card:hover .r-content {
-  max-height: 400px;
+  max-height: 800px;
   opacity: 1;
   padding: 24px 32px 32px;
   border-top: 1px solid var(--border-subtle);
@@ -163,14 +248,62 @@
   padding-left: 20px;
 }
 
+.custom-list {
+  padding-left: 20px;
+}
+
 .r-content li {
   color: var(--text-muted);
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   line-height: 1.6;
   margin-bottom: 12px;
 }
 
+.r-content li strong {
+  color: var(--brand-navy);
+}
+
 .r-content li:last-child {
   margin-bottom: 0;
+}
+
+.important-note {
+  max-width: 850px;
+  margin: 60px auto 0;
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 40px;
+  border-radius: 20px;
+}
+
+.note-title {
+  color: #1E3A8A;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+}
+
+.important-note p {
+  color: #334155;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+.tagline {
+  font-family: var(--font-display);
+  font-weight: 800;
+  color: var(--brand-coral);
+  letter-spacing: 2px;
+  margin-bottom: 24px;
+}
+
+.mt-4 {
+  margin-top: 24px;
+  display: inline-block;
+}
+
+.text-center {
+  text-align: center;
 }
 </style>
