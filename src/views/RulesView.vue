@@ -11,6 +11,17 @@
     </div>
     
     <div class="container-custom page-content">
+      <div class="content-actions">
+        <a href="/WTL_Rules_Regulations.pdf" download class="btn-secondary download-btn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="download-icon">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" y1="15" x2="12" y2="3"></line>
+          </svg>
+          Download Rules And Regulations PDF
+        </a>
+      </div>
+
       <div class="rules-accordion">
         
         <div class="r-card">
@@ -180,6 +191,40 @@
 
 .page-content {
   margin-top: 50px;
+}
+
+.content-actions {
+  max-width: 850px;
+  margin: 0 auto 24px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--brand-navy);
+  color: #FFFFFF;
+  padding: 12px 24px;
+  border-radius: 50px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.download-btn:hover {
+  background: transparent;
+  color: var(--brand-navy);
+  border-color: var(--brand-navy);
+  box-shadow: 0 4px 15px rgba(16, 24, 63, 0.1);
+}
+
+.download-icon {
+  flex-shrink: 0;
 }
 
 .rules-accordion {
