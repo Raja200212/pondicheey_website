@@ -451,19 +451,9 @@ const handleSubmit = async () => {
 
   // 1. Sync to Google Sheets
   try {
-    const result = await submitToGoogleSheet(submissionRecord)
-    if (result && result.serverRegistrationId) {
-      // Overwrite the local generated ID with the server one to ensure global sequence
-      submissionRecord.registrationId = result.serverRegistrationId
-      // Also update local storage counter so the next local one at least starts higher
-      const serverId = result.serverRegistrationId
-      if (serverId.startsWith('WTL-RRC-10')) {
-        const numPart = serverId.replace('WTL-RRC-10', '')
-        if (!isNaN(parseInt(numPart, 10))) {
-          localStorage.setItem('wtl_rrc_counter', parseInt(numPart, 10).toString())
-        }
-      }
-    }
+    // We only send the data to Google Sheets, we ignore any server-returned ID 
+    // to ensure the local counter increments correctly without being reset.
+    await submitToGoogleSheet(submissionRecord)
   } catch (err) {
     console.error('Google Sheet submission error:', err)
   }
