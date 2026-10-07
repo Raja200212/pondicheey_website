@@ -40,15 +40,27 @@ function doPost(e) {
     const newRegistrationId = prefix + paddedCount;
     
     // Create the row data based on the received parameters
-    // In a real implementation, you would map e.parameter fields to your sheet columns
-    // Example:
-    // const rowData = [
-    //   data.timestamp,
-    //   newRegistrationId,
-    //   data.fullName,
-    //   // ... other fields
-    // ];
-    // sheet.appendRow(rowData);
+    const rowData = [
+      data.timestamp || new Date().toISOString(),
+      newRegistrationId,
+      data.fullName || '',
+      data.whatsapp || '',
+      data.email || '',
+      data.district || '',
+      data.igHandle || '',
+      data.reelLink || '',
+      data.description || '',
+      data.script || '',
+      data.cast || '',
+      data.camera || '',
+      data.editing || '',
+      data.voice || '',
+      data.music || '',
+      data.collabCheck || ''
+    ];
+    
+    // Append the row to the sheet so the next request sees it!
+    sheet.appendRow(rowData);
     
     lock.releaseLock();
     

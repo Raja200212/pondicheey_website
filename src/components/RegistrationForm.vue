@@ -452,10 +452,12 @@ const handleSubmit = async () => {
   // 1. Sync to Google Sheets
   try {
     const result = await submitToGoogleSheet(submissionRecord)
+    
+    // If the Google Script returns a new global ID, update the frontend!
     if (result && result.serverRegistrationId) {
-      // Overwrite the local generated ID with the server one to ensure global sequence
       submissionRecord.registrationId = result.serverRegistrationId
-      // Also update local storage counter so the next local one at least starts higher
+      
+      // Update local storage so the next local one starts higher
       const serverId = result.serverRegistrationId
       if (serverId.startsWith('WTL-RRC-10')) {
         const numPart = serverId.replace('WTL-RRC-10', '')
